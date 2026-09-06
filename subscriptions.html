@@ -96,218 +96,144 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 56px 32px 72px;
+    padding: 52px 32px 80px;
   }
 
   /* ─── Masthead ─── */
-  .masthead {
-    text-align: center;
-    margin-bottom: 64px;
-    opacity: 0;
-    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
-  }
+  .masthead { text-align: center; margin-bottom: 40px; opacity: 0;
+    animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) 0.1s forwards; }
+  .masthead a.home { display: inline-block; text-decoration: none; transition: opacity .3s ease; }
+  .masthead a.home:hover { opacity: .75; }
+  .masthead img { width: 118px; height: auto; display: block; margin: 0 auto 6px; }
+  .masthead .wordmark { font-family: 'Playfair Display', serif; font-size: 31px;
+    color: var(--white); letter-spacing: .02em; line-height: 1; }
+  .masthead .sub { font-size: 9.5px; letter-spacing: .4em; color: var(--green-mid);
+    text-transform: uppercase; margin-top: 9px; }
 
-  .masthead a.home {
-    display: inline-block;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-  }
+  /* ─── Hero ─── */
+  .hero { text-align: center; margin-bottom: 40px; opacity: 0;
+    animation: fadeUp 1.3s cubic-bezier(0.16,1,0.3,1) .3s forwards; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(28px,4.6vw,50px); line-height: 1.16; color: var(--white); }
+  .hero .lede { max-width: 610px; margin: 22px auto 0; font-size: clamp(14px,2vw,16.5px);
+    line-height: 1.7; color: var(--white-dim); }
+  .hero .motto { font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 16px; color: var(--white-faint); margin-top: 18px; }
 
-  .masthead a.home:hover { opacity: 0.75; }
-
-  .masthead img {
-    width: 132px;
-    height: auto;
-    display: block;
-    margin: 0 auto 6px;
-  }
-
-  .masthead .wordmark {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: 34px;
-    color: var(--white);
-    letter-spacing: 0.02em;
-    line-height: 1;
-  }
-
-  .masthead .sub {
-    font-size: 10px;
-    letter-spacing: 0.4em;
-    color: var(--green-mid);
-    text-transform: uppercase;
-    margin-top: 9px;
-  }
-
-  /* ─── Page title ─── */
-  .page-title {
-    text-align: center;
-    margin-bottom: 56px;
-    opacity: 0;
-    animation: fadeUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
-  }
-
-  .page-title h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: clamp(30px, 5vw, 46px);
-    color: var(--white);
-    line-height: 1.15;
-  }
-
-  .page-title p {
-    width: 100%;
-    max-width: 560px;
-    margin: 20px auto 0;
-    font-size: clamp(14px, 2vw, 16px);
-    line-height: 1.7;
-    color: var(--white-dim);
-  }
+  /* ─── Billing toggle ─── */
+  .toggle { display: flex; align-items: center; justify-content: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 34px; opacity: 0;
+    animation: fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) .5s forwards; }
+  .tbtn { background: none; border: 1px solid var(--card-line); color: var(--white-dim);
+    font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px;
+    letter-spacing: .06em; padding: 9px 22px; border-radius: 100px; cursor: pointer;
+    transition: .2s ease; }
+  .tbtn[aria-pressed="true"] { background: rgba(74,222,128,.1); border-color: var(--green-dim);
+    color: var(--white); }
+  .tbtn:hover { border-color: var(--green-dim); }
+  .savebadge { font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--green-mid); border: 1px solid var(--card-line); border-radius: 100px;
+    padding: 6px 13px; }
 
   /* ─── Tier grid ─── */
-  .tiers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    align-items: stretch;
-    opacity: 0;
-    animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
-  }
+  .tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px;
+    align-items: stretch; opacity: 0;
+    animation: fadeUp 1.4s cubic-bezier(0.16,1,0.3,1) .65s forwards; }
+  .tier { background: var(--card); border: 1px solid var(--card-line); border-radius: 4px;
+    padding: 32px 26px 30px; display: flex; flex-direction: column; position: relative; }
+  .tier.feat { border-color: var(--green-dim);
+    background: linear-gradient(170deg, rgba(74,222,128,.06), rgba(74,222,128,.02)); }
+  .flag { position: absolute; top: -10px; left: 24px; background: var(--green-dim);
+    color: #04120C; font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
+    font-weight: 400; padding: 4px 11px; border-radius: 100px; }
 
-  .tier {
-    background: var(--card);
-    border: 1px solid var(--card-line);
-    border-radius: 3px;
-    padding: 34px 28px 32px;
-    display: flex;
-    flex-direction: column;
-  }
+  .tier-name { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 27px;
+    color: var(--white); line-height: 1; }
+  .tier-meaning { font-family: 'Playfair Display', serif; font-style: italic; font-size: 13.5px;
+    line-height: 1.5; color: var(--white-dim); margin-top: 11px; }
+  .tier-kind { font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--green-mid); margin-top: 14px; }
+  .tier-desc { font-size: 13.5px; line-height: 1.65; color: var(--white-dim); margin-top: 14px;
+    min-height: 66px; }
 
-  .tier-name {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: 27px;
-    color: var(--white);
-    line-height: 1;
-  }
+  .tier-price { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--green-bright);
+    margin-top: 22px; line-height: 1; }
+  .tier-price .per { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--white-faint);
+    letter-spacing: .02em; }
+  .pnote { font-size: 11.5px; line-height: 1.6; color: var(--white-faint); margin-top: 10px;
+    min-height: 34px; }
 
-  .tier-kind {
-    font-size: 9.5px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    margin-top: 11px;
-  }
-
-  .tier-price {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: 30px;
-    color: var(--green-bright);
-    margin-top: 26px;
-    line-height: 1;
-  }
-
-  .tier-price .period {
-    display: block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--white-faint);
-    margin-top: 10px;
-  }
-
-  .tier-rule {
-    height: 1px;
-    background: var(--rule);
-    margin: 26px 0 24px;
-  }
+  .tier-rule { height: 1px; background: var(--rule); margin: 22px 0 18px; }
 
   .tier ul { list-style: none; }
+  .tier li { position: relative; padding-left: 20px; font-size: 13.5px; line-height: 1.6;
+    color: var(--white-dim); margin-bottom: 13px; }
+  .tier li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px;
+    background: var(--green-dark); border-radius: 50%; }
+  .tier li strong { font-weight: 400; color: var(--white); }
 
-  .tier li {
-    position: relative;
-    padding-left: 19px;
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--white-dim);
-    margin-bottom: 15px;
-  }
+  .tier .excl { border-top: 1px solid var(--rule); margin-top: 20px; padding-top: 14px;
+    font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--white-faint);
+    margin-bottom: 13px; }
+  .tier li.no { color: var(--footer-text); }
+  .tier li.no::before { background: none; border: 1px solid var(--footer-text);
+    width: 5px; height: 5px; border-radius: 50%; top: 8px; }
 
-  .tier li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 5px;
-    height: 5px;
-    background: var(--green-dark);
-    border-radius: 50%;
-  }
+  .tier .disclose { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--rule);
+    font-size: 11.5px; line-height: 1.6; color: var(--white-faint); }
 
-  .tier li strong {
-    font-weight: 400;
-    color: var(--white);
-  }
+  /* ─── Strips ─── */
+  .strip { border: 1px solid var(--card-line); border-radius: 4px; padding: 24px 28px;
+    margin-top: 20px; background: rgba(74,222,128,.025); opacity: 0;
+    animation: fadeUp 1.3s cubic-bezier(0.16,1,0.3,1) .85s forwards; }
+  .strip.lead { border-color: var(--green-dim);
+    background: linear-gradient(100deg, rgba(74,222,128,.07), rgba(74,222,128,.02)); }
+  .strip p { font-size: 14px; line-height: 1.75; color: var(--white-dim); }
+  .strip p + p { margin-top: 11px; }
+  .strip strong { font-weight: 400; color: var(--white); }
 
-  /* ─── Both-tiers note ─── */
-  .note {
-    width: 100%;
-    margin-top: 44px;
-    padding: 26px 30px;
-    border-left: 1px solid var(--green-muted);
-    background: rgba(74, 222, 128, 0.02);
-    max-width: 760px;
-    opacity: 0;
-    animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.85s forwards;
-  }
+  /* ─── Sections ─── */
+  section { margin-top: 72px; }
+  section h2 { font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(24px,3.4vw,32px); color: var(--white); }
+  section .h2sub { font-size: 14.5px; line-height: 1.7; color: var(--white-dim);
+    max-width: 680px; margin: 12px 0 26px; }
 
-  .note p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--white-dim);
-  }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+  th, td { text-align: left; padding: 13px 14px; border-bottom: 1px solid var(--rule);
+    color: var(--white-dim); }
+  th { font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--white-faint); font-weight: 400; }
+  td:first-child { color: var(--white); }
+  td.hl { color: var(--green-bright); }
+  .tnote { font-size: 12px; line-height: 1.7; color: var(--white-faint); margin-top: 14px; }
 
-  .note p + p { margin-top: 13px; }
+  /* ─── FAQ ─── */
+  details { border-bottom: 1px solid var(--rule); }
+  summary { padding: 17px 34px 17px 0; cursor: pointer; list-style: none; position: relative;
+    font-size: 14.5px; color: var(--white); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; position: absolute; right: 4px; top: 14px; font-size: 19px;
+    color: var(--green-mid); font-weight: 300; }
+  details[open] summary::after { content: '\2212'; }
+  details p { padding: 0 0 17px; font-size: 13.5px; line-height: 1.75; color: var(--white-dim);
+    max-width: 780px; }
+  details p + p { padding-top: 0; margin-top: -4px; }
 
-  .note strong { font-weight: 400; color: var(--white); }
-
-  /* ─── Opening soon ─── */
-  .opening {
-    margin-top: 56px;
-    text-align: center;
-    padding-top: 46px;
-    border-top: 1px solid var(--rule);
-    opacity: 0;
-    animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.05s forwards;
-  }
-
-  .opening h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(21px, 3vw, 28px);
-    color: var(--white-dim);
-  }
-
-  .opening p {
-    width: 100%;
-    max-width: 460px;
-    margin: 16px auto 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--white-faint);
-  }
+  /* ─── Disclosure ─── */
+  .disclosure { margin-top: 72px; padding-top: 26px; border-top: 1px solid var(--rule);
+    font-size: 11.5px; line-height: 1.8; color: var(--footer-text); }
+  .disclosure p + p { margin-top: 12px; }
 
   /* ─── Responsive ─── */
-  @media (max-width: 860px) {
-    .tiers { grid-template-columns: 1fr; gap: 16px; }
-    main { padding: 44px 24px 56px; }
-    .masthead { margin-bottom: 48px; }
-    .page-title { margin-bottom: 40px; }
+  @media (max-width: 900px) {
+    .tiers { grid-template-columns: 1fr; gap: 16px; max-width: 470px; margin-inline: auto; }
+    main { padding: 40px 22px 56px; }
+    .tier-desc { min-height: 0; }
+    .pnote { min-height: 0; }
     footer { flex-direction: column; text-align: center; padding: 20px 24px 24px; }
   }
 </style>
@@ -315,12 +241,16 @@
 <body>
 
 <!--
-  ═══════════════════════════════════════════════════════════════════
-  PRICES LIVE IN THE TWO .tier-price BLOCKS BELOW AND NOWHERE ELSE.
-  Moyogi and Yamadori each carry their monthly price once, inside the
-  card that sells it. Search this file for "tier-price" to find both.
-  No annual price is set, so no annual option is offered.
-  ═══════════════════════════════════════════════════════════════════
+  PRICES live once each, in the data-m and data-a attributes of their own card.
+  Search "data-m=" to find all four. Nothing is duplicated anywhere on this page.
+
+  CHECKOUT. The Subscribe buttons do not exist yet. Create four Stripe Payment
+  Links (Moyogi monthly, Moyogi annual, Yamadori monthly, Yamadori annual) and
+  add an anchor to each card pointing at the matching URL. Do not point a
+  Subscribe button at anything that cannot take money.
+
+  This file is in a PUBLIC repository. Nothing internal goes in these comments:
+  no counts, no rosters, no parameters, no figures, no decision history.
 -->
 
   <main>
@@ -333,70 +263,185 @@
       </a>
     </div>
 
-    <div class="page-title">
-      <h1>Subscriptions</h1>
-      <p>Kodama publishes what the Bonsai Nobi model does. Every entry, every exit, on the day the model takes it. Three ways to follow it.</p>
+    <div class="hero">
+      <h1>One model. Every signal.<br>Choose how early you see it.</h1>
+      <p class="lede">Kodama publishes what a systematic model did, every trading day, before the outcome was known. Not a forecast, not an opinion, not a newsletter about the market.</p>
+      <p class="motto">We do not predict. We record.</p>
+    </div>
+
+    <div class="toggle">
+      <button class="tbtn" id="bm" aria-pressed="true" onclick="setBilling('m')">Monthly</button>
+      <button class="tbtn" id="ba" aria-pressed="false" onclick="setBilling('a')">Annual</button>
+      <span class="savebadge">Annual saves two months</span>
     </div>
 
     <div class="tiers">
 
+      <!-- ─────────── POTENSAI ─────────── -->
       <section class="tier">
         <div class="tier-name">Potensai</div>
+        <div class="tier-meaning">A raw, unstyled tree. Where every bonsai begins.</div>
         <div class="tier-kind">Free</div>
-        <div class="tier-price">Free<span class="period">No card required</span></div>
+        <p class="tier-desc">Watch the model work. You see that it acted, and you see how the trade finished. You do not see the name in time to act on it.</p>
+        <div class="tier-price">Free<div class="per">No card required</div></div>
+        <p class="pnote">Cancel by ignoring us.</p>
         <div class="tier-rule"></div>
         <ul>
-          <li>The <strong>daily record</strong> of what the model did, with the names withheld</li>
-          <li>The <strong>monthly report</strong></li>
-          <li>The <strong>weekly newsletter</strong></li>
-          <li>A way to watch the system work before paying for it</li>
+          <li>The <strong>Kodama Research Desk Daily Newsletter</strong>, a market briefing after the close every trading day</li>
+          <li><strong>Entry notices</strong>. The model opened a position today, name withheld</li>
+          <li>The <strong>sell recap</strong>, with results. Every closed trade, winners and losers alike</li>
+          <li><strong>Details of previously closed trades</strong>, on a 30 to 60 day trailing basis</li>
+          <li>The <strong>educational library</strong></li>
+        </ul>
+        <div class="excl">Not included</div>
+        <ul>
+          <li class="no">The Daily Alert</li>
+          <li class="no">Any actionable entry or exit signal</li>
+          <li class="no">The holdings list</li>
         </ul>
       </section>
 
-      <section class="tier">
+      <!-- ─────────── MOYOGI ─────────── -->
+      <section class="tier feat">
+        <div class="flag">The model</div>
         <div class="tier-name">Moyogi</div>
-        <div class="tier-kind">Full daily alert</div>
-        <div class="tier-price">$89<span class="period">per month</span></div>
+        <div class="tier-meaning">The informal upright. Natural rhythm, expanding reach.</div>
+        <div class="tier-kind">For self-directed investors</div>
+        <p class="tier-desc">Everything the model does, every trading day. One model, one signal set, one published record, the same one you are reading the results of.</p>
+        <div class="tier-price"><span data-m="$89" data-a="$74.92">$89</span><div class="per" data-m="per month" data-a="per month, billed annually">per month</div></div>
+        <p class="pnote" data-m="Launch price, first 300 subscribers." data-a="$899 a year. Saves $169 against monthly.">Launch price, first 300 subscribers.</p>
         <div class="tier-rule"></div>
         <ul>
-          <li>The <strong>full Daily Alert</strong>. Every entry and every exit the model takes, on the day it takes it</li>
-          <li>The <strong>grade and target weight</strong> of each trade</li>
-          <li>Nebari entries and Hasami exits as the model records them</li>
-          <li>The <strong>weekly newsletter</strong></li>
+          <li><strong>Everything in Potensai</strong></li>
+          <li>The <strong>full Daily Alert, every signal</strong>. Entries, exits, trims and reserve legs, in your hands the evening before the model trades</li>
+          <li>The <strong>grade and target weight</strong> of every trade, reported as the model took it</li>
+          <li>The <strong>complete holdings list</strong>, by name</li>
+          <li>A <strong>pre-market briefing</strong> summarising overnight news</li>
+          <li>The research desk's <strong>daily summary</strong></li>
+          <li>The <strong>subscriber handbook</strong> and member area</li>
         </ul>
+        <div class="excl">Not included</div>
+        <ul>
+          <li class="no">QuickStart</li>
+          <li class="no">The first cycle of a newly promoted name. You get a notice without the name</li>
+          <li class="no">Direct access to the desk</li>
+          <li class="no">First access to new strategies</li>
+        </ul>
+        <p class="disclose">The published model record includes first-cycle trades that Yamadori subscribers received first.</p>
       </section>
 
+      <!-- ─────────── YAMADORI ─────────── -->
       <section class="tier">
         <div class="tier-name">Yamadori</div>
-        <div class="tier-kind">Everything in Moyogi, plus</div>
-        <div class="tier-price">$129<span class="period">per month</span></div>
+        <div class="tier-meaning">A wild tree from harsh mountains. Rare, battle-tested.</div>
+        <div class="tier-kind">Everything, sooner</div>
+        <p class="tier-desc">The same model and the same signals, plus the model's whole book on your first day, the first cycle of every newly promoted name, and a line to the people who run it.</p>
+        <div class="tier-price"><span data-m="$129" data-a="$108.25">$129</span><div class="per" data-m="per month" data-a="per month, billed annually">per month</div></div>
+        <p class="pnote" data-m="Launch price, first 300 subscribers." data-a="$1,299 a year. Saves $249 against monthly.">Launch price, first 300 subscribers.</p>
         <div class="tier-rule"></div>
         <ul>
-          <li>Everything in Moyogi</li>
-          <li><strong>First access</strong> to names newly promoted into the traded pool, revealed at their first entry signal rather than at promotion</li>
-          <li><strong>Additional strategies</strong> and the analysis layer as they are released</li>
+          <li><strong>Everything in Moyogi</strong></li>
+          <li><strong>QuickStart.</strong> The model's full portfolio and weights at signup, so you can match the book from day one instead of building into it as new signals arrive</li>
+          <li><strong>Fenceline first-cycle names.</strong> When the model buys a newly promoted name for the first time, you get the alert with the name. Other tiers get a notice without it</li>
+          <li><strong>Mid-day market updates</strong> through the trading day</li>
+          <li><strong>Direct support access</strong> to the desk, not a general queue</li>
+          <li><strong>First access</strong> to new Redwood strategies as they are released</li>
         </ul>
+        <p class="disclose">Promotions are the output of a quarterly review, not a daily one. Some years bring several first-cycle names and some quarters bring none.</p>
       </section>
 
     </div>
 
-    <div class="note">
-      <p><strong>Both paid tiers receive every signal the model produces.</strong> There is no second portfolio and no held-back list. Yamadori differs from Moyogi by timing and by depth, never by which trades it sees.</p>
-      <p>Kodama reports. It does not instruct. The Daily Alert is the record of what the model did, not a set of orders for your account, and a signal the model could not fund is not shown as one it took.</p>
+    <div class="strip lead">
+      <p><strong>Founding members: the first 300.</strong> Launch pricing is held for the first 300 paid subscribers who take an annual subscription and maintain it. For as long as you keep it, your launch price is maintained. It is a hard cap on the cohort, not on the business.</p>
     </div>
 
-    <div class="opening">
-      <h2>Opening soon.</h2>
-      <p>Subscriptions are not yet open. Prices shown are the launch prices for the monthly tiers.</p>
-      <!--
-        WAITLIST CAPTURE GOES HERE.
-        Deliberately left out rather than faked. There is no payment
-        processor and no confirmed capture endpoint, and a form that
-        posts nowhere collects nothing while looking as though it does.
-        Kodama already sends through MailerLite, so a MailerLite embedded
-        form is the natural fit. Paste the embed inside this comment's
-        place once the form and its list exist.
-      -->
+    <div class="strip">
+      <p>Kodama reports. It does not instruct. The Daily Alert is the record of what the model did, not a set of orders for your account, and Kodama knows nothing about your holdings, your objectives or your tax position.</p>
+      <p><strong>Good research is worth its weight in gold.</strong> Subscription pricing is subject to change.</p>
+    </div>
+
+    <!-- ─────────── WHAT ARRIVES ─────────── -->
+    <section>
+      <h2>What arrives, and when</h2>
+      <p class="h2sub">One model and one published record. No tier receives a degraded version of it, and the only place the tiers diverge on signal is the first cycle of a newly promoted name.</p>
+      <div class="scroll">
+        <table>
+          <tr><th>Event</th><th>Potensai</th><th>Moyogi</th><th>Yamadori</th></tr>
+          <tr><td>Model enters a Farm name</td><td>Notice, no name</td><td>Full alert</td><td>Full alert</td></tr>
+          <tr><td>Model enters a newly promoted name, first time</td><td>Notice, no name</td><td>Notice, no name</td><td class="hl">Full alert</td></tr>
+          <tr><td>Model exits any position</td><td>In the recap</td><td>Full alert</td><td>Full alert</td></tr>
+          <tr><td>Model trims or moves the reserve</td><td>Not shown</td><td>Full alert</td><td>Full alert</td></tr>
+          <tr><td>Current holdings</td><td>Not shown</td><td>By name</td><td class="hl">By name and weight</td></tr>
+          <tr><td>The book at signup</td><td>Not shown</td><td>Not shown</td><td class="hl">QuickStart</td></tr>
+          <tr><td>Trade closes</td><td>Result shown, name after 30 to 60 days</td><td>Result shown</td><td>Result shown</td></tr>
+          <tr><td>Daily newsletter</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+        </table>
+      </div>
+      <p class="tnote">Every alert carries the target weight of the trade as the model took it. The grading vocabulary and the scoring behind it stay internal.</p>
+    </section>
+
+    <!-- ─────────── ACCOUNT SIZE ─────────── -->
+    <section>
+      <h2>Whether this fits your account</h2>
+      <p class="h2sub">The model trades whole shares and sizes every position as a percentage of its own equity. Below a certain account size it cannot take some of its own trades, so a smaller account follows the model less closely. This is a measured property of the model, not a rule imposed on you.</p>
+      <div class="scroll">
+        <table>
+          <tr><th>Account size</th><th>What happens</th></tr>
+          <tr><td>Under $25,000</td><td>Difficult to follow properly. Too many trades are unaffordable at the model's own weights</td></tr>
+          <tr><td>$50,000</td><td>Comfortable. Most of what the model does is reproducible</td></tr>
+          <tr><td>$250,000 and up</td><td>Effortless. The model's trades are reproducible without friction</td></tr>
+        </table>
+      </div>
+      <p class="tnote">Figures from the Kodama capital floor study.</p>
+    </section>
+
+    <!-- ─────────── FAQ ─────────── -->
+    <section>
+      <h2>Questions</h2>
+
+      <details>
+        <summary>What is the difference between the two paid tiers?</summary>
+        <p>Both receive the full Daily Alert and every signal the model produces. There is one model and one published record, and neither tier gets a degraded version of it.</p>
+        <p>Yamadori adds QuickStart, which is the model's whole book and its weights on the day you join, and the first cycle of a newly promoted name. When a name is promoted into the traded pool, the first time the model buys it the alert goes to Yamadori with the name attached, and other tiers are told the model opened a position without being told which. From the second time onward it alerts everyone. Yamadori also carries direct access to the desk and first access to new strategies as they are released.</p>
+      </details>
+
+      <details>
+        <summary>What is QuickStart?</summary>
+        <p>A new Moyogi subscriber builds into the model gradually, taking each new position as its signal fires, so it can be months before their account resembles the model's. QuickStart hands a new Yamadori subscriber the model's full portfolio and its weights at signup, so they can match the book on day one instead.</p>
+        <p>It is a report of what the model holds on the day you join. What you do with it is your decision.</p>
+      </details>
+
+      <details>
+        <summary>Do I get told about a promoted name before the model buys it?</summary>
+        <p>No, and this is deliberate. A name is revealed at the moment its first entry signal fires and the model itself takes the trade. Nobody at any tier ever receives a ticker without a signal attached to it.</p>
+      </details>
+
+      <details>
+        <summary>How often does a first-cycle name actually happen?</summary>
+        <p>Promotions are the output of a quarterly review, not a daily one. Some quarters bring several and some bring none. Yamadori is the whole bundle, and anyone buying it for this item alone is buying it for the wrong reason.</p>
+      </details>
+
+      <details>
+        <summary>Is this advice?</summary>
+        <p>No. Kodama is a research publication. Everything we send is identical for every subscriber, prepared without any knowledge of your holdings, your account, your objectives or your tax position. We are not your adviser, we do not manage money, and every alert reports what the model did rather than telling you what to do. What you do with it is your decision and your responsibility.</p>
+      </details>
+
+      <details>
+        <summary>Are the returns real money?</summary>
+        <p>No. The published record is a hypothetical model portfolio that runs the rules mechanically. It is not an account, not a fund, and not audited, and nobody's money produced those returns.</p>
+        <p>Your own results will differ, because the model pays no commission, crosses no spread, suffers no slippage, pays no tax, and never hesitates on a bad morning.</p>
+      </details>
+
+      <details>
+        <summary>Can I share my subscription?</summary>
+        <p>No. A subscription is personal to one individual.</p>
+      </details>
+    </section>
+
+    <div class="disclosure">
+      <p>All performance information published by Kodama is hypothetical model performance and is based on backtested results for the period before the splice date. It is not an investment account, a fund, or an audited track record, and does not represent returns any investor actually attained. Past performance, whether actual or backtested, does not indicate future results. Investing involves risk including the possible loss of principal.</p>
+      <p>Kodama publishes general and impersonal research and does not provide personalised investment advice.</p>
     </div>
 
   </main>
@@ -405,6 +450,17 @@
     <p>&copy; 2026 Kodama Mori Trading Inc., a Bonsai Trading Ltd. company. All rights reserved.</p>
     <p>Kodama publishes what its model and its trading desk do. It is not personalised investment advice.</p>
   </footer>
+
+<script>
+function setBilling(mode){
+  var m = mode === 'm';
+  document.getElementById('bm').setAttribute('aria-pressed', m);
+  document.getElementById('ba').setAttribute('aria-pressed', !m);
+  document.querySelectorAll('[data-m]').forEach(function(el){
+    el.textContent = m ? el.getAttribute('data-m') : el.getAttribute('data-a');
+  });
+}
+</script>
 
 </body>
 </html>
