@@ -175,6 +175,33 @@
     color: var(--white);
   }
 
+
+  /* ─── Secondary link under the CTA ─── */
+  .story-link {
+    text-align: center;
+    margin-top: 26px;
+    opacity: 0;
+    animation: fadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 2s forwards;
+  }
+
+  .story-link a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--white-faint);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .story-link a:hover {
+    color: var(--green-bright);
+    border-color: var(--green-dim);
+  }
+
   /* ─── Footer ─── */
   footer {
     position: relative;
@@ -259,6 +286,8 @@
     <p class="sub-tagline">Institutional-grade intelligence for independent investors.</p>
 
     <a class="cta-button" href="/subscriptions.html">See Subscriptions</a>
+
+    <p class="story-link"><a href="/our-story.html">Why this system exists</a></p>
   </main>
 
   <footer>
