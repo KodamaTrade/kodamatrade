@@ -55,7 +55,11 @@ Each one is a thing that went wrong:
   ruling of 2026-09-08: the research and trade desks receive signals from the model, Kodama
   publishes **trade alerts**. In public copy, "signal" reads as advice. What fires inside the
   model is called a **trigger** (Nebari the entry trigger, Hasami the exit trigger).
-  `our-story.html` is exempt because it carries John's verbatim copy about Mike.
+  `our-story.html` is exempt because it carries John's verbatim copy about Mike, and
+  **`index.html` is exempt on purpose**: the tagline "Systematic trading signals, precisely
+  cultivated" describes what the desks cultivate, not what a subscriber receives. John ruled on
+  it when he made the ruling above, and again on 2026-09-08 when a session flagged it as a
+  breach. It is not one. Read the decision before you "fix" the homepage; that session did not.
 - No retired vocabulary: Bonsai Breakout, Tanuki, Elite 50, Active 83, Golden 18, Golden ETFs,
   Canon, replica, Raymond James. Raymond James is entirely separate from Redwood, Bonsai and
   Kodama and must never appear or be implied.
@@ -152,8 +156,11 @@ The publisher versus adviser classification is unresolved and is the legal criti
 
 - `strategy.html` claims results were reproduced on "multiple separate professional investment
   platforms". Nothing documents this. Name the platforms and record it, or soften the sentence.
-- `subscriptions.html` cites a $25,000 capital floor in a study line and $35,000 in the table.
-  One of them is wrong.
+  This is now the only unsubstantiated sentence left on the site. The capital floor thresholds on
+  `subscriptions.html` looked like a second one and are not: John confirmed on 2026-09-08 that the
+  Kodama capital floor study is real and was part of the original design. It is not on SCOUT under
+  that name, so the citation still has no home to point at. Ask John where it lives and record the
+  path rather than searching for it again.
 - The four Stripe Payment Links do not exist, so the Subscribe buttons are disabled.
 - `members.html` still carries the old unlinked footer.
 - The daily email is still titled "Kodama Daily Signals" and becomes "Daily Alerts". That is not
