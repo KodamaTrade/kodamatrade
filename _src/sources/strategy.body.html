@@ -1,0 +1,278 @@
+<body>
+
+<!--
+  THE STRATEGY. Public explainer for Bonsai Nobi.
+  IP RULE: results may be shown; settings may not. Nothing on this page states a
+  threshold, a window length, a scoring formula, a sizing rule or any part of the
+  capital-allocation logic. No pool counts, no rosters, no example tickers.
+  FIGURES: every number below was produced by modelportfolio_stats.py run against the
+  Model Portfolio store on SCOUT, as of the 2026-09-04 close. None are typed from memory.
+  Regenerate before changing any of them.
+-->
+
+<div class="wrap">
+
+<header>
+  <a class="home" href="/">
+    <img class="markimg" src="__LOGO__" alt="Kodama">
+    <div class="mark">Kodama</div>
+  </a>
+  <h1>One model. Every trade recorded since January 2008. Your opportunity to follow the research desk.</h1>
+  <p class="lede">Bonsai Nobi is a quantitative trading algorithm strategy for individual stocks. It is not an AI generated trading system. It was designed by a human who researched hundreds of strategies used by hedge funds, famous Wall Street traders, and quant pioneers. It was developed in consultation with a professional portfolio manager who manages real client money. AI machines have thoroughly tested it, trying to break it. The trade history has been uploaded and reproduced on multiple separate professional investment platforms to verify the results. This is the Bonsai Nobi model. Kodama publishes what it does.</p>
+</header>
+
+<section class="sec">
+  <div class="big">
+    <div class="stat"><div class="k">Annualised return</div><div class="v">30.96%</div><div class="n">SPY 11.31% over the same period</div></div>
+    <div class="stat"><div class="k">Years beating SPY</div><div class="v">19 of 19</div><div class="n">18 complete years plus 2026 to date</div></div>
+    <div class="stat"><div class="k">Worst drawdown</div><div class="v">&minus;40.58%</div><div class="n">2008 to 2009. It happened. It recovered.</div></div>
+    <div class="stat"><div class="k">Sharpe</div><div class="v">1.25</div><div class="n">Sortino 1.64 &middot; Calmar 0.76</div></div>
+  </div>
+  <p class="asof">Model Portfolio, whole shares, anchored 2 January 2008 at $100,000 USD, as of the 4 September 2026 close. All figures in US dollars. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
+</section>
+
+<section class="sec">
+  <h2>Research from a model that shows the receipts</h2>
+  <p class="h2sub">Every decision, every day, verified before it reaches you.</p>
+  <p class="prose">Most investment research asks you to trust the analyst. Kodama's research is different in one important way: the analyst is a rules-based quant model, and every trade it makes is shown in full. Each trading day the Kodama Research Desk publishes what the model did, what it is holding now, and how the record is adding up, in the same way a good analyst publishes ratings and stands behind them. The difference is that this analyst has no opinions, has locked rules in place to dictate trades, and has every decision since 2008 on the record for anyone to check.</p>
+  <p class="prose" style="margin-top:16px">That is what a subscription is: <b>a seat at the desk while a disciplined, tested model works, with every trade on the table and nothing dressed up.</b> The desk monitors the model independently and verifies every trade against the ledger before it is published. What the desk never does is change the rules, override a decision or add a view of its own. The rules were locked before the record began, and the research is the honest, daily publication of what they produce. How that research fits your own thinking is, as with any research, yours to decide.</p>
+  <p class="prose" style="margin-top:16px">The simplest way to picture it is a cook working through a dish on television. You watch every step as it happens: what goes in, when, how much of it, and what comes out at the end. The desk works the same way. You see each position as it opens, the weight it was given, when it was trimmed, when it was closed, and how the desk handles the ordinary business of running a book. <b>What you do not get is the recipe.</b> The measurements behind the rules stay with us. That is the only part held back, and it is the part a subscription is actually buying.</p>
+</section>
+
+<section class="sec">
+  <h2>Most systems talk about potential. This one has been through five declines.</h2>
+  <p class="prose">A strategy that has only ever run in a rising market has not been tested, it has been lucky. This one has been run through every major decline since the anchor: <b>2008, 2018, 2020, 2022 and 2025</b>. Not as a hypothetical, and not on rules invented afterwards. The same rules, on the same pinned data, through each of them.</p>
+  <p class="prose" style="margin-top:16px">It is not a magic trick. In a sharp panic the model can fall as hard as the market or harder, because it holds individual companies rather than five hundred of them. What it does is recover faster and take more of the upside when the recovery comes, and that combination is what compounds. The research desk measured it directly, because a strategy that only looks good on the way up is not a strategy.</p>
+
+  <div class="big" style="margin-top:26px">
+    <div class="stat"><div class="k">Upside capture</div><div class="v">146%</div><div class="n">Of the market's gain in up months</div></div>
+    <div class="stat"><div class="k">Downside capture</div><div class="v">74%</div><div class="n">Of the market's loss in down months</div></div>
+    <div class="stat"><div class="k">Sharpe</div><div class="v">1.25</div><div class="n">SPY 0.65 over the same period</div></div>
+    <div class="stat"><div class="k">Volatility</div><div class="v">23.9%</div><div class="n">SPY 19.8%. Higher, and paid for.</div></div>
+  </div>
+  <p class="asof">Capture ratios computed on 224 monthly observations since January 2008. Volatility and Sharpe annualised from daily returns, risk-free rate zero. As of the 4 September 2026 close. Based on backtested results.</p>
+
+  <p class="prose" style="margin-top:22px">Those four boxes are one argument. <b>The model is more volatile than the index, by about a fifth, and that is the honest cost of concentration.</b> The question the desk cared about was whether the return justified it. Roughly one and a half times the market's gains, roughly three quarters of its losses, and a Sharpe of 1.25 against the index's 0.65 says it did. The return pays for the extra movement rather than merely absorbing it.</p>
+  <div class="pull2">Every number on this page is generated from the record itself, not typed from a slide deck. The record includes the trades that lost money.</div>
+</section>
+
+<section class="sec">
+  <h2>What it actually is</h2>
+  <p class="h2sub">In one paragraph, before any jargon.</p>
+  <p class="prose">Bonsai Nobi buys individual stocks that have pulled back inside an established uptrend, sizes each position by how reliable that name has proven to be, and sells on a rule rather than on an opinion. When it is not holding stocks it holds the market itself. It trades a curated pool of large American companies, it is long only, it uses no leverage and no options, and it makes one decision a day, after the close. <b>It does not predict anything.</b> It reacts to what price has already done.</p>
+  <div class="pull2">We do not forecast. We record what the model did, every trading day, and publish it whether it was right or wrong.</div>
+</section>
+
+<section class="sec">
+  <h2>How a trade happens</h2>
+  <p class="h2sub">Four steps. The measurements behind them are the part we do not publish.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="num">Step one</div>
+      <h3>Nebari</h3>
+      <p>The entry trigger. It looks for a healthy long-term trend that has just given something back, on the theory that the discount is temporary and the trend is not. It fires at the close.</p>
+    </div>
+    <div class="step">
+      <div class="num">Step two</div>
+      <h3>The grade</h3>
+      <p>Not every entry deserves the same money. Each name carries a grade earned from how it has behaved in this system historically, and the grade sets the position size. Better track record, bigger position.</p>
+    </div>
+    <div class="step">
+      <div class="num">Step three</div>
+      <h3>The hold</h3>
+      <p>Winners are left alone to work. The model will trim a position to fund a strong new entry, but a trim is never an exit, and the decision is made on the close and filled at the next open.</p>
+    </div>
+    <div class="step">
+      <div class="num">Step four</div>
+      <h3>Hasami</h3>
+      <p>The exit trigger, and the reason the system exists. It does not negotiate, it does not average down, and it does not wait to get back to even. When it fires, the position is closed.</p>
+    </div>
+  </div>
+  <p class="prose" style="margin-top:24px">Cash never sits idle. Anything not committed to a position is held in the broad market, so the model is always invested in something. That is why it earns during the quiet stretches instead of waiting.</p>
+</section>
+
+<section class="sec">
+  <h2>Most of the work was throwing things away</h2>
+  <p class="prose">Hundreds of strategies were built and tested before this one was kept. Almost all of them died for the same two reasons. Either they were not consistent, producing a good year and then a terrible one on the same rules, or they only worked in one kind of market, which is the same failure wearing a better disguise. A rule that prints money in a bull run and hands it all back in a bear market has not found an edge, it has found a trend.</p>
+  <p class="prose" style="margin-top:16px">The survivors were the ideas that still worked when the conditions changed, and that kept working when combined with each other. <b>The discarded tests were kept as well</b>, with the reasoning written down before the results were seen, which is why the archive can be shown to anyone who asks how a rule earned its place.</p>
+</section>
+
+<section class="sec">
+  <h2>It hunts. And it hunts in a curated wood.</h2>
+  <p class="h2sub">The rules matter. Where you point them matters just as much.</p>
+  <p class="prose">The same rules do not behave the same way on every stock. Some companies move in the clean, repeatable way this system is built to read. Others are noisy, gap-prone or news-driven, and they generate entries that look right and end badly. So the universe is not the whole market. The Kodama Research Desk starts from the S&amp;P 1500 and curates from it, keeping only the names where the strategy has demonstrated a genuine risk and return relationship rather than a lucky run.</p>
+  <p class="prose" style="margin-top:16px">Two measures drive that selection more than raw return. <b>Win rate</b>, because a strategy you cannot stay with is worthless no matter what the curve says, and <b>profit factor</b>, because what actually compounds is the relationship between what the winners make and what the losers cost. A name that returns well but only through two enormous outliers is a name this system does not want.</p>
+
+  <div class="big" style="margin-top:26px">
+    <div class="stat"><div class="k">Win rate</div><div class="v">65.2%</div><div class="n">1,334 closed positions since 2008</div></div>
+    <div class="stat"><div class="k">Profit factor</div><div class="v">3.51</div><div class="n">Gross profit against gross loss</div></div>
+    <div class="stat"><div class="k">Average win</div><div class="v">+17.2%</div><div class="n">Average loss &minus;9.0%</div></div>
+    <div class="stat"><div class="k">Median hold</div><div class="v">100 days</div><div class="n">This is not day trading</div></div>
+  </div>
+  <p class="asof">Closed single-name positions in the Model Portfolio record, anchored 2 January 2008, as of the 4 September 2026 close. One position counts once: partial sales taken along the way are aggregated into the position they belong to, not counted as separate trades. Returns are measured against the position's original cost. Based on backtested results.</p>
+
+  <p class="prose" style="margin-top:22px">Read the third box before the first. Being right about two thirds of the time is good but not extraordinary. What matters is that <b>the average winner is close to twice the size of the average loser</b>. That asymmetry is the engine, and it is what the exit rule exists to protect: losers are cut while they are still small, winners are left alone to become large.</p>
+
+  <p class="prose" style="margin-top:16px">One note on how these are counted, because it is the easiest place in this industry to flatter yourself. The model sometimes sells part of a position while keeping the rest, and by rule it only ever does that to a winner. <b>Counting each of those partial sales as its own trade would lift the win rate to 75% and it would not mean anything</b>, because you would be counting the same good position several times. So a position counts once here, from entry to final exit, with everything realised along the way folded into it. That is the conservative reading and it is the one we publish.</p>
+</section>
+
+<section class="sec">
+  <h2>The list is not set and forgotten</h2>
+  <p class="prose">Reliability is not a permanent property. A company changes, its sector changes, the way it trades changes, and a name that suited this system for six years can stop suiting it. So the desk reviews the universe continuously and acts on what the review finds. Names are promoted when they earn it, demoted when their reliability slips, and removed when they no longer belong. New candidates are watched and measured before a single dollar goes near them.</p>
+  <p class="prose" style="margin-top:16px">Reviews happen on a schedule and recommendations are logged, but changes take effect only at set reselection points rather than the moment someone has an opinion. <b>That gap is deliberate.</b> It is the difference between a curated list and a reactive one, and it is the discipline that stops a bad month from rewriting the roster.</p>
+</section>
+
+<section class="sec">
+  <h2>A complete record, not a tip</h2>
+  <p class="prose">Most services publish a name and stop. That is the easy quarter of the picture, and on its own it is close to useless. A name without the size the model gave it, the moment it acted, and the rule that later took it off the book is not a record of anything. So the research reports all four, for every position, every time.</p>
+  <div class="steps" style="margin-top:22px">
+    <div class="step"><div class="num">Entry</div><h3>What the model bought</h3><p>The name, and the trigger that fired on it.</p></div>
+    <div class="step"><div class="num">Sizing</div><h3>How much it held</h3><p>The weight, graded by how reliable that name has proven to be.</p></div>
+    <div class="step"><div class="num">Timing</div><h3>When it acted</h3><p>Decided on the close, filled at the next open. Reported the same evening.</p></div>
+    <div class="step"><div class="num">Exit</div><h3>When it left</h3><p>The rule that closed it, defined before the position was ever opened.</p></div>
+  </div>
+  <p class="prose" style="margin-top:22px">All four, every time, published together. What you are reading is a record of decisions already made by a set of rules, not a suggestion about what you should do next.</p>
+</section>
+
+<section class="sec">
+  <h2>The record, year by year</h2>
+  <p class="h2sub">Every calendar year since the anchor, against SPY. Nothing removed.</p>
+  <div class="scroll">
+  <table class="yr">
+    <thead><tr><th>Year</th><th>Model</th><th>SPY</th><th>Difference</th></tr></thead>
+    <tbody>
+      <tr><td>2008</td><td class="neg">&minus;19.25%</td><td class="neg">&minus;36.24%</td><td class="pos">+16.99</td></tr>
+      <tr><td>2009</td><td class="pos">+92.19%</td><td>+26.35%</td><td class="pos">+65.84</td></tr>
+      <tr><td>2010</td><td class="pos">+44.39%</td><td>+15.06%</td><td class="pos">+29.33</td></tr>
+      <tr><td>2011</td><td class="pos">+15.06%</td><td>+1.89%</td><td class="pos">+13.17</td></tr>
+      <tr><td>2012</td><td class="pos">+42.76%</td><td>+15.99%</td><td class="pos">+26.77</td></tr>
+      <tr><td>2013</td><td class="pos">+57.63%</td><td>+32.31%</td><td class="pos">+25.32</td></tr>
+      <tr><td>2014</td><td class="pos">+24.35%</td><td>+13.46%</td><td class="pos">+10.89</td></tr>
+      <tr><td>2015</td><td class="pos">+1.39%</td><td>+1.23%</td><td class="pos">+0.16</td></tr>
+      <tr><td>2016</td><td class="pos">+40.28%</td><td>+12.00%</td><td class="pos">+28.28</td></tr>
+      <tr><td>2017</td><td class="pos">+28.90%</td><td>+21.71%</td><td class="pos">+7.20</td></tr>
+      <tr><td>2018</td><td class="pos">+8.22%</td><td class="neg">&minus;4.57%</td><td class="pos">+12.79</td></tr>
+      <tr><td>2019</td><td class="pos">+42.61%</td><td>+31.22%</td><td class="pos">+11.38</td></tr>
+      <tr><td>2020</td><td class="pos">+28.55%</td><td>+18.33%</td><td class="pos">+10.22</td></tr>
+      <tr><td>2021</td><td class="pos">+64.66%</td><td>+28.73%</td><td class="pos">+35.93</td></tr>
+      <tr><td>2022</td><td class="neg">&minus;8.42%</td><td class="neg">&minus;18.18%</td><td class="pos">+9.76</td></tr>
+      <tr><td>2023</td><td class="pos">+49.65%</td><td>+26.18%</td><td class="pos">+23.47</td></tr>
+      <tr><td>2024</td><td class="pos">+56.92%</td><td>+24.89%</td><td class="pos">+32.03</td></tr>
+      <tr><td>2025</td><td class="pos">+30.19%</td><td>+17.72%</td><td class="pos">+12.47</td></tr>
+      <tr><td>2026</td><td class="pos">+28.30%</td><td>+13.54%</td><td class="pos">+14.76</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="asof">2026 is year to date at 4 September 2026. Model returns are the whole-share Model Portfolio track. Based on backtested results.</p>
+  <p class="prose" style="margin-top:22px">Two losing years in nineteen, and in both of them the market lost more. The model does not avoid bad years. It finishes them in better shape, and it does not need a heroic recovery to get back to where it was.</p>
+</section>
+
+<section class="sec">
+  <h2>What it will and will not do</h2>
+  <p class="h2sub">The second column matters more than the first.</p>
+  <div class="twocol">
+    <div class="panel">
+      <h3>It will</h3>
+      <ul>
+        <li>Trade individual American large-cap stocks, long only</li>
+        <li>Hold the broad market when it is not holding names</li>
+        <li>Make its decisions after the close and fill at the next open</li>
+        <li>Cut a loser on a rule, without waiting to break even</li>
+        <li>Publish every entry and exit it makes, including the ones that went badly</li>
+        <li>Sit in cash-equivalent exposure for long stretches without apology</li>
+      </ul>
+    </div>
+    <div class="panel no">
+      <h3>It will not</h3>
+      <ul>
+        <li>Predict the market, or tell you where the index is going</li>
+        <li>Use leverage, margin, options, futures or crypto</li>
+        <li>Short anything</li>
+        <li>Trade intraday, or ask you to watch a screen</li>
+        <li>Change its rules because a month went badly</li>
+        <li>Guarantee a result, or protect you from a drawdown</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>The question the desk kept asking: what if you buy at the worst possible moment?</h2>
+  <p class="h2sub">Rolling three-year and five-year windows, every single starting day.</p>
+  <p class="prose">A single since-inception number tells you almost nothing on its own, because nobody reads a record from its first day. People start paying attention on some ordinary Tuesday, possibly the worst one. So the research desk did not judge this on the headline. It judged it on <b>every three-year and five-year window in the record</b>, one for each trading day, which is 3,942 three-year windows and 3,440 five-year windows.</p>
+  <p class="prose" style="margin-top:16px">That is a deliberately unkind test. It includes the windows that begin the day before a crash, and the ones that begin at a market top. It is also the only test that answers the question a careful reader actually has, which is not "how did it do since 2008" but "how did it do from a bad starting point".</p>
+
+  <div class="big" style="margin-top:26px">
+    <div class="stat"><div class="k">Worst 3-year window</div><div class="v">+18.7%</div><div class="n">SPY's worst was &minus;8.3%</div></div>
+    <div class="stat"><div class="k">Worst 5-year window</div><div class="v">+73.5%</div><div class="n">SPY's worst was +12.2%</div></div>
+    <div class="stat"><div class="k">Median 3-year window</div><div class="v">+127%</div><div class="n">SPY median +45.6%</div></div>
+    <div class="stat"><div class="k">Median 5-year window</div><div class="v">+276%</div><div class="n">SPY median +92.1%</div></div>
+  </div>
+  <p class="asof">Every rolling window with a complete history in the record, measured daily, anchored 2 January 2008, as of the 4 September 2026 close. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
+
+  <p class="prose" style="margin-top:22px">The worst number in that table is the one worth sitting with. <b>There is no three-year window in the record where the model lost money</b>, and the weakest one still compounded at roughly 6% a year. The market has three-year windows that finish underwater. Across five years the gap widens rather than narrows, which is what you would expect from an edge rather than from luck: luck decays with time, and a rule set does not.</p>
+</section>
+
+<section class="sec">
+  <h2>Built by a trader. Checked by a professional.</h2>
+  <p class="prose">The rules came out of one trader's decade of work, and they were shaped in consultation with a professional portfolio manager who runs real client money for a living. That mattered in a specific way. A private trader optimises for return. Someone answerable to clients has to care about the things that make a strategy survivable: how deep the losses go, how long they last, whether the thing can be followed by a person with a job, and whether the record can be defended line by line when someone asks.</p>
+  <p class="prose" style="margin-top:16px">So the design questions were not only "does this make money". They were "would a client stay invested through this", and "can every line of this be defended when somebody asks". <b>That is why the exit rule exists, why the position sizes are graded, and why the losing tests were kept.</b></p>
+</section>
+
+<section class="sec">
+  <h2>Why the rules are not published</h2>
+  <p class="prose">You will notice this page names the triggers but not their settings. That is deliberate and it is the honest trade. The entry threshold, the exit rule's parameters, the grading formula and the funding logic are the decade of work, and they are the only thing a subscriber is actually paying for. Everything downstream of them, the trades, the timing, the sizing and the results, is published in full, every trading day, along with how the desk handles the ordinary running of a book. <b>The steps are on show. The measurements are not.</b></p>
+  <p class="prose" style="margin-top:16px">What you can verify instead is the record. It runs on a single continuously invested portfolio anchored in January 2008 that has never been restarted, re-seeded or re-anchored, on pinned data that is appended to and never rewritten, with every rule change registered in writing before its results were seen. <b>The archive includes the tests that failed.</b> That is the part a competitor cannot copy, because nobody fabricates their own losses.</p>
+</section>
+
+<section class="sec">
+  <h2>Questions</h2>
+  <details><summary>Is this a fund, or are you managing my money?</summary>
+    <p>Neither. Kodama publishes research, in the same way an analyst publishes ratings on companies. You keep your own brokerage account, you make your own decisions, and nobody at Kodama has access to your money or your positions. What you receive is a verified record of what a rules-based quant model did and what it is doing. Whether that is useful to you, and how, is your call.</p>
+  </details>
+  <details><summary>Are these real returns?</summary>
+    <p>They are model returns, calculated on backtested results before the splice date, on a portfolio that pays no commission, trades at open prices, suffers no slippage and pays no tax. It is not an investment account, a fund or an audited track record, and it does not represent returns any investor actually attained. Your own results will differ.</p>
+  </details>
+  <details><summary>I am outside the United States. Is this any use to me?</summary>
+    <p>Yes. The model trades US-listed equities, so the research is relevant to any investor anywhere who can access US markets, and most international brokers offer them. Nothing in the record depends on where the reader lives.</p>
+    <p>The record is kept in US dollars. Local rules on tax and market access are yours to work out; Kodama publishes the same research to everyone and does not tailor it to any jurisdiction.</p>
+  </details>
+  <details><summary>Does account size matter when reading this?</summary>
+    <p>The model holds whole shares at fixed weights on a $100,000 USD starting portfolio. Below roughly $35,000 USD some of its positions become unaffordable at the size it uses, so a reader with a smaller account comparing their own results against the record will see the two drift apart. It is worth knowing before you compare. The subscriptions page has the detail.</p>
+  </details>
+  <details><summary>How often does it trade?</summary>
+    <p>Rarely enough to be manageable and often enough to matter. The model has made a few thousand entries since 2008, which averages out to a handful of decisions in a typical week, and some weeks none at all.</p>
+  </details>
+  <details><summary>What happens in a crash?</summary>
+    <p>It loses money. The worst peak-to-trough decline in the record is 40.58%, in 2008 and 2009. The exit rule shortens those declines rather than preventing them, which is why 2008 and 2022 were losing years that lost roughly half what the market lost. Anyone who tells you their system does not have a drawdown is showing you a curve that has been fitted.</p>
+  </details>
+  <details><summary>Do I get the actual names?</summary>
+    <p>On the paid tiers, yes. Every entry and exit the model makes, by name and weight, reported the day it happens. The free tier shows the same daily record with the names withheld.</p>
+  </details>
+</section>
+
+<section class="storyblock">
+  <h2>See what it is doing today</h2>
+  <p>The research is published every trading day. The free tier carries the record with the names withheld. The paid tiers carry the full record, names included, as the model makes each decision rather than weeks later.</p>
+  <p class="storycta"><a href="/subscriptions.html">See subscriptions</a></p>
+</section>
+
+<!-- DISCLOSURES. Generated from Documents/Kodama_Brand_Assets/DISCLAIMER_Kodama_Public_2026-09-08.md.
+     Edit the .md, then regenerate this block. Clauses 10 and 11 are deliberately absent
+     until their facts are confirmed. -->
+__DISCLOSURE__
+
+<footer>
+  <div class="social">
+    <a href="https://www.youtube.com/@Kodamatrade" target="_blank" rel="noopener" aria-label="Kodama on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6z"/></svg></a>
+    <a href="https://www.instagram.com/kodamatrade/" target="_blank" rel="noopener" aria-label="Kodama on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.43.42.7.83.9 1.4.18.4.38 1 .43 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.42.43-.83.7-1.4.9-.4.18-1 .38-2.2.43-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.43-.42-.7-.83-.9-1.4-.18-.4-.38-1-.43-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.42-.43.83-.7 1.4-.9.4-.18 1-.38 2.2-.43C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.83-.4.4-.63.8-.83 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.07 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.83 1.3.4.4.8.63 1.3.83.4.16 1 .35 2.1.4 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.83.4-.4.63-.8.83-1.3.16-.4.35-1 .4-2.1.06-1.2.07-1.6.07-3.3s0-2.1-.07-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.83-1.3-.4-.4-.8-.63-1.3-.83-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm6.2-8.2a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></a>
+    <a href="https://www.tiktok.com/@kodamatrade" target="_blank" rel="noopener" aria-label="Kodama on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .77-5.06V9.7a5.68 5.68 0 0 0-.77-.05A5.65 5.65 0 1 0 15.54 15.3V8.99a7.34 7.34 0 0 0 4.29 1.37V7.27a4.29 4.29 0 0 1-3.23-1.45z"/></svg></a>
+    <a href="https://www.facebook.com/KodamaTrade" target="_blank" rel="noopener" aria-label="Kodama on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+  </div>
+  <p>Past performance does not guarantee future results. Hypothetical, backtested model performance. Full disclosures above.</p>
+  <p>&copy; 2026 Kodama Mori Trading Inc., a Bonsai Trading Ltd. company. All rights reserved. British Columbia, Canada. <a href="/">Home</a> &middot; <a href="/subscriptions.html">Subscriptions</a> &middot; <a href="/our-story.html">Our story</a></p>
+</footer>
+
+</div>
+</body>
+</html>

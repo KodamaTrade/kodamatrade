@@ -1,0 +1,222 @@
+<body>
+
+<!--
+  PRICES live once each, in the data-m and data-a attributes of their own card.
+  Search "data-m=" to find all four. Nothing is duplicated on this page.
+
+  CHECKOUT. The Subscribe buttons are disabled because no Stripe Payment Links
+  exist yet. Create four (Moyogi monthly, Moyogi annual, Yamadori monthly,
+  Yamadori annual), turn each button into an anchor pointing at its URL, and
+  delete the disabled attribute. Do not point a Subscribe button at anything
+  that cannot take money.
+
+  This file is in a PUBLIC repository. Nothing internal goes in these comments:
+  no counts, no rosters, no parameters, no figures, no decision history.
+-->
+
+<div class="wrap">
+
+<header>
+  <a class="home" href="/">
+    <img class="markimg" src="__LOGO__" alt="Kodama">
+    <div class="mark">Kodama</div>
+  </a>
+  <h1>One model. Every trade.<br>Choose how early you see it.</h1>
+  <p class="lede">Kodama reports what a systematic quant model is doing, every trading day, based on proven and backtested proprietary quantitative algorithm rules. Not a forecast, not an opinion, not a <span class="nowrap">"we know the next hot stock"</span> newsletter.</p>
+  <p class="tagline">We do not predict. We record and report the results live.</p>
+</header>
+
+<div class="toggle">
+  <button class="tbtn" id="bm" aria-pressed="true" onclick="setBilling('m')">Monthly</button>
+  <button class="tbtn" id="ba" aria-pressed="false" onclick="setBilling('a')">Annual</button>
+  <span class="savebadge">Annual saves two months</span>
+</div>
+<p class="tognote">Checkout opens shortly. All prices are in US dollars. The prices shown are the launch prices.</p>
+
+<div class="grid">
+
+  <!-- ─────────── POTENSAI ─────────── -->
+  <div class="card">
+    <div class="tname">Potensai</div>
+    <div class="tmean">A raw, unstyled tree. Where every bonsai begins.</div>
+    <div class="trole">Free</div>
+    <p class="tdesc">Watch the model work. You see that it acted, and you see how the trade finished. You do not see the name in time to act on it.</p>
+    <div class="price"><span class="pnum">Free</span></div>
+    <p class="pnote">No card. Cancel by ignoring us.</p>
+    <button class="cta" disabled>Join the list</button>
+    <ul>
+      <li><span class="i">&#10003;</span><span>The <b>Kodama Research Desk Daily Newsletter</b>, a market briefing after the close every trading day</span></li>
+      <li><span class="i">&#10003;</span><span>The daily record of what the model did, with the names withheld</span></li>
+      <li><span class="i">&#10003;</span><span>Details of previously closed trades, from 30 to 60 days trailing</span></li>
+      <div class="divider">Not included</div>
+      <li class="no"><span class="i">&#10007;</span><span>The Daily Alert</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>Any actionable entry or exit alert</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>The holdings list</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>QuickStart</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>The first cycle of a newly promoted name. You get a notice without the name</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>First access to new strategies</span></li>
+    </ul>
+  </div>
+
+  <!-- ─────────── MOYOGI ─────────── -->
+  <div class="card feat">
+    <div class="flag">The model</div>
+    <div class="tname">Moyogi</div>
+    <div class="tmean">The informal upright. Natural rhythm, expanding reach.</div>
+    <div class="trole">Research for self-directed investors</div>
+    <p class="tdesc">Everything the model does, every trading day. One model, one set of alerts, one published record, the same one you are reading the results of.</p>
+    <div class="price"><span class="pnum" data-m="$89" data-a="$74.92">$89</span><span class="pper" data-m="/ month" data-a="/ month, billed annually">/ month</span></div>
+    <p class="pnote" data-m="Launch price, subject to change." data-a="$899 a year, price locked for life*">Launch price, subject to change.</p>
+    <button class="cta solid" disabled>Subscribe</button>
+    <ul>
+      <li><span class="i">&#10003;</span><span>The <b>Kodama Research Desk Daily Newsletter</b>, a market briefing after the close every trading day</span></li>
+      <li><span class="i">&#10003;</span><span>A <b>pre-market briefing</b> summary with overnight news</span></li>
+      <li><span class="i">&#10003;</span><span><b>The full Daily Alert.</b> Every entry and exit the model is taking, as the model makes the trade</span></li>
+      <li><span class="i">&#10003;</span><span>The grade and weight of each trade the model is making</span></li>
+      <li><span class="i">&#10003;</span><span>The full metrics and statistics of the Model Portfolio</span></li>
+      <li><span class="i">&#10003;</span><span>The subscriber onboarding handbook</span></li>
+      <div class="divider">Not included</div>
+      <li class="no"><span class="i">&#10007;</span><span>QuickStart</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>The first cycle of a newly promoted name. You get a notice without the name</span></li>
+      <li class="no"><span class="i">&#10007;</span><span>First access to new strategies</span></li>
+    </ul>
+    <p class="disclose">The published model record includes first-cycle trades that Yamadori subscribers received first.</p>
+  </div>
+
+  <!-- ─────────── YAMADORI ─────────── -->
+  <div class="card">
+    <div class="tname">Yamadori</div>
+    <div class="tmean">A wild tree from harsh mountains. Rare, battle-tested.</div>
+    <div class="trole">Everything, sooner</div>
+    <p class="tdesc">The same model and the same alerts, plus the first cycle of every newly promoted name, and access to additional models and proprietary quant strategies.</p>
+    <div class="price"><span class="pnum" data-m="$129" data-a="$108.25">$129</span><span class="pper" data-m="/ month" data-a="/ month, billed annually">/ month</span></div>
+    <p class="pnote" data-m="Launch price, subject to change." data-a="$1,299 a year, price locked for life*">Launch price, subject to change.</p>
+    <button class="cta" disabled>Subscribe</button>
+    <ul>
+      <li><span class="i">&#10003;</span><span><b>All Moyogi benefits</b>, including the daily newsletter with trading alerts</span></li>
+      <li><span class="i">&#10003;</span><span>Additional <b>mid-day market updates</b>, to stay current on evolving trends</span></li>
+      <li><span class="i">&#10003;</span><span><b>QuickStart</b> access to the current portfolio holdings, including weights, and current positional performance</span></li>
+      <li><span class="i">&#10003;</span><span><b>First access to newly approved Farm names</b> that are on the Fenceline to promotion into the trading pool, revealed at their first entry alert rather than after promotion</span></li>
+      <li><span class="i">&#10003;</span><span>Access to <b>additional institutional quant trading strategies</b> utilized by the Kodama trade desk</span></li>
+      <li><span class="i">&#10003;</span><span>Access to the Kodama <b>educational library</b>, currently under development</span></li>
+    </ul>
+    <p class="disclose">Promotions are the output of a quarterly review, not a daily one. Some years bring several first-cycle names and some quarters bring none.</p>
+  </div>
+
+</div>
+
+<div class="strip lead">
+  <p><b>* Founding members: the first 300.</b> The launch price is locked for life for the first 300 paid subscribers who take an <b>annual</b> subscription and maintain it. For as long as you keep it, your price does not rise. It is a hard cap on the cohort, not on the business. Monthly subscriptions are not locked.</p>
+</div>
+
+<div class="strip">
+  <p>Kodama reports. It does not instruct. The Daily Alert is the record of what the model did, not a set of orders for your account, and Kodama knows nothing about your holdings, your objectives or your tax position.</p>
+  <p><b>Good research is worth its weight in gold.</b> Subscription pricing is subject to change.</p>
+  <p><b>All prices are in US dollars.</b> Sales tax or an equivalent may be added at checkout depending on where you live.</p>
+</div>
+
+<section>
+  <h2>What arrives, and when</h2>
+  <p class="h2sub">One model and one published record. No tier receives a degraded version of it, and the only place the tiers diverge is the first cycle of a newly promoted name.</p>
+  <div class="scroll">
+    <table>
+      <tr><th>Event</th><th>Potensai</th><th>Moyogi</th><th>Yamadori</th></tr>
+      <tr><td>Model enters a Farm name</td><td>Notice, no name</td><td>Full alert</td><td>Full alert</td></tr>
+      <tr><td>Model enters a newly promoted name, first time</td><td>Notice, no name</td><td>Notice, no name</td><td class="hl">Full alert</td></tr>
+      <tr><td>Model exits any position</td><td>In the recap</td><td>Full alert</td><td>Full alert</td></tr>
+      <tr><td>Current Model Holdings</td><td>Not shown</td><td>Not shown</td><td class="hl">By name and weight (QuickStart)</td></tr>
+      <tr><td>Daily newsletter</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    </table>
+  </div>
+  <p class="tnote">Every alert carries the target weight of the trade as the model took it. The grading vocabulary and the scoring behind it stay internal.</p>
+</section>
+
+<section>
+  <h2>Whether this fits your account</h2>
+  <p class="h2sub">The model trades whole shares and sizes every position as a percentage of its own equity. Below a certain account size it cannot take some of its own trades, so a smaller account follows the model less closely. This is a measured property of the model, not a rule imposed on you.</p>
+  <div class="scroll">
+    <table>
+      <tr><th>Account size</th><th>What happens</th></tr>
+      <tr><td>Under $35,000</td><td>Can follow, but some stock prices are unaffordable at the model's own weights, so some skipped trades will result</td></tr>
+      <tr><td>$50,000</td><td>Comfortable. Most of what the model does is reproducible</td></tr>
+      <tr><td>$250,000 and up</td><td>Effortless. The model's trades are reproducible without friction</td></tr>
+    </table>
+  </div>
+  <p class="tnote">Figures from the Kodama capital floor study.</p>
+</section>
+
+<section>
+  <h2>Questions</h2>
+
+  <details><summary>What is QuickStart?</summary>
+    <p>A new Moyogi subscriber who wishes to follow the model builds into the portfolio gradually, each new position alerted as the model opens it, so it can be months before their account resembles the model's if that is what they wish to do. QuickStart hands a new Yamadori subscriber the model's full portfolio and its weights at signup, so they can see the whole book on day one instead.</p>
+  </details>
+
+  <details><summary>How often does a first-cycle name actually happen?</summary>
+    <p>Promotions are the output of a quarterly review, not a daily one. Some quarters bring several and some bring none.</p>
+  </details>
+
+  <details><summary>Is this advice?</summary>
+    <p>No. Kodama is a research publication and is not financial advice. We are only sharing what the model has traded, prepared without any knowledge of your financial situation, your holdings, your account, your goals and objectives or your tax position. We are not your adviser, and every alert reports what the model did rather than telling you what to do. What you do with this research is your decision and your responsibility.</p>
+  </details>
+
+  <details><summary>Are the returns real money?</summary>
+    <p>No. The published record is a hypothetical model portfolio that runs the rules mechanically. It is not an account, not a fund, and nobody's money produced those historical returns. The Kodama Trade Desk monitors it themselves on a going-forward basis only.</p>
+    <p>Your own results may differ, because the model pays no commission, trades at open prices, suffers no slippage, pays no tax, and never hesitates on a bad morning.</p>
+  </details>
+
+  <details><summary>What currency are the prices in?</summary>
+    <p>US dollars, for everyone, including subscribers in Canada. The research covers US equities and the record is kept in US dollars, so the pricing follows. Sales tax or an equivalent may be added at checkout depending on where you live.</p>
+  </details>
+
+</section>
+
+<section class="storyblock">
+  <h2>Why this system exists</h2>
+  <p>Kodama did not begin as a business. It began with our uncle, who built a fortune trading, lost it, and spent the years afterwards building the discipline that would not have let it happen.</p>
+  <p class="storycta"><a href="/our-story.html">Read his story</a></p>
+</section>
+
+<!-- DISCLOSURES. Generated from Documents/Kodama_Brand_Assets/DISCLAIMER_Kodama_Public_2026-09-08.md.
+     Edit the .md, then regenerate this block. Clauses 10 and 11 are deliberately absent
+     until their facts are confirmed. -->
+__DISCLOSURE__
+
+<footer>
+<!-- SOCIAL. Only live accounts appear here. To add one, copy an <a> block,
+     swap the href, the aria-label and the SVG path. Do not add a placeholder
+     for an account that does not exist yet: a dead social icon reads as a
+     dead company. Pending: Instagram, TikTok, Facebook. -->
+<div class="social">
+  <a href="https://www.youtube.com/@Kodamatrade" target="_blank" rel="noopener" aria-label="Kodama on YouTube">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/kodamatrade/" target="_blank" rel="noopener" aria-label="Kodama on Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.43.42.7.83.9 1.4.18.4.38 1 .43 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.42.43-.83.7-1.4.9-.4.18-1 .38-2.2.43-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.43-.42-.7-.83-.9-1.4-.18-.4-.38-1-.43-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.42-.43.83-.7 1.4-.9.4-.18 1-.38 2.2-.43C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.83-.4.4-.63.8-.83 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.07 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.83 1.3.4.4.8.63 1.3.83.4.16 1 .35 2.1.4 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.83.4-.4.63-.8.83-1.3.16-.4.35-1 .4-2.1.06-1.2.07-1.6.07-3.3s0-2.1-.07-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.83-1.3-.4-.4-.8-.63-1.3-.83-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2zm6.2-8.2a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+  </a>
+  <a href="https://www.tiktok.com/@kodamatrade" target="_blank" rel="noopener" aria-label="Kodama on TikTok">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .77-5.06V9.7a5.68 5.68 0 0 0-.77-.05A5.65 5.65 0 1 0 15.54 15.3V8.99a7.34 7.34 0 0 0 4.29 1.37V7.27a4.29 4.29 0 0 1-3.23-1.45z"/></svg>
+  </a>
+  <a href="https://www.facebook.com/KodamaTrade" target="_blank" rel="noopener" aria-label="Kodama on Facebook">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+  </a>
+</div>
+
+  <p>Past performance does not guarantee future results. Hypothetical, backtested model performance. Full disclosures above.</p>
+  <p>&copy; 2026 Kodama Mori Trading Inc., a Bonsai Trading Ltd. company. All rights reserved. British Columbia, Canada. <a href="/">Home</a> &middot; <a href="/our-story.html">Our story</a></p>
+</footer>
+
+</div>
+
+<script>
+function setBilling(mode){
+  var m = mode === 'm';
+  document.getElementById('bm').setAttribute('aria-pressed', m);
+  document.getElementById('ba').setAttribute('aria-pressed', !m);
+  document.querySelectorAll('[data-m]').forEach(function(el){
+    el.textContent = m ? el.getAttribute('data-m') : el.getAttribute('data-a');
+  });
+}
+</script>
+</body>
+</html>
