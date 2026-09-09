@@ -23,12 +23,12 @@
 
 <section class="sec">
   <div class="big">
-    <div class="stat"><div class="k">Annualised return</div><div class="v">30.96%</div><div class="n">SPY 11.31% over the same period</div></div>
-    <div class="stat"><div class="k">Years beating SPY</div><div class="v">19 of 19</div><div class="n">18 complete years plus 2026 to date</div></div>
-    <div class="stat"><div class="k">Worst drawdown</div><div class="v">&minus;40.58%</div><div class="n">2008 to 2009. It happened. It recovered.</div></div>
-    <div class="stat"><div class="k">Sharpe</div><div class="v">1.25</div><div class="n">Sortino 1.64 &middot; Calmar 0.76</div></div>
+    <div class="stat"><div class="k">Annualised return</div><div class="v" data-fig="cagr">30.96%</div><div class="n">SPY <span data-fig="spy_cagr">11.31%</span> over the same period</div></div>
+    <div class="stat"><div class="k">Years beating SPY</div><div class="v" data-fig="years_ahead">19 of 19</div><div class="n"><span data-fig="years_complete">18</span> complete years plus 2026 to date</div></div>
+    <div class="stat"><div class="k">Worst drawdown</div><div class="v" data-fig="max_dd">&minus;40.58%</div><div class="n">2008 to 2009. It happened. It recovered.</div></div>
+    <div class="stat"><div class="k">Sharpe</div><div class="v" data-fig="sharpe">1.25</div><div class="n">Sortino <span data-fig="sortino">1.64</span> &middot; Calmar <span data-fig="calmar">0.76</span></div></div>
   </div>
-  <p class="asof">Model Portfolio, whole shares, anchored 2 January 2008 at $100,000 USD, as of the 4 September 2026 close. All figures in US dollars. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
+  <p class="asof">Model Portfolio, whole shares, anchored 2 January 2008 at <span data-fig="anchor_capital">$100,000</span> USD, as of the <span data-fig="asof">4 September 2026</span> close. All figures in US dollars. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
 </section>
 
 <section class="sec">
@@ -45,14 +45,14 @@
   <p class="prose" style="margin-top:16px">It is not a magic trick. In a sharp panic the model can fall as hard as the market or harder, because it holds individual companies rather than five hundred of them. What it does is recover faster and take more of the upside when the recovery comes, and that combination is what compounds. The research desk measured it directly, because a strategy that only looks good on the way up is not a strategy.</p>
 
   <div class="big" style="margin-top:26px">
-    <div class="stat"><div class="k">Upside capture</div><div class="v">146%</div><div class="n">Of the market's gain in up months</div></div>
-    <div class="stat"><div class="k">Downside capture</div><div class="v">74%</div><div class="n">Of the market's loss in down months</div></div>
-    <div class="stat"><div class="k">Sharpe</div><div class="v">1.25</div><div class="n">SPY 0.65 over the same period</div></div>
-    <div class="stat"><div class="k">Volatility</div><div class="v">23.9%</div><div class="n">SPY 19.8%. Higher, and paid for.</div></div>
+    <div class="stat"><div class="k">Upside capture</div><div class="v" data-fig="upside_capture">146%</div><div class="n">Of the market's gain in up months</div></div>
+    <div class="stat"><div class="k">Downside capture</div><div class="v" data-fig="downside_capture">74%</div><div class="n">Of the market's loss in down months</div></div>
+    <div class="stat"><div class="k">Sharpe</div><div class="v" data-fig="sharpe">1.25</div><div class="n">SPY <span data-fig="spy_sharpe">0.64</span> over the same period</div></div>
+    <div class="stat"><div class="k">Volatility</div><div class="v" data-fig="vol">23.9%</div><div class="n">SPY <span data-fig="spy_vol">19.8%</span>. Higher, and paid for.</div></div>
   </div>
-  <p class="asof">Capture ratios computed on 224 monthly observations since January 2008. Volatility and Sharpe annualised from daily returns, risk-free rate zero. As of the 4 September 2026 close. Based on backtested results.</p>
+  <p class="asof">Capture ratios computed on <span data-fig="monthly_obs">224</span> monthly observations since January 2008. Volatility and Sharpe annualised from daily returns, risk-free rate zero. As of the 4 September 2026 close. Based on backtested results.</p>
 
-  <p class="prose" style="margin-top:22px">Those four boxes are one argument. <b>The model is more volatile than the index, by about a fifth, and that is the honest cost of concentration.</b> The question the desk cared about was whether the return justified it. Roughly one and a half times the market's gains, roughly three quarters of its losses, and a Sharpe of 1.25 against the index's 0.65 says it did. The return pays for the extra movement rather than merely absorbing it.</p>
+  <p class="prose" style="margin-top:22px">Those four boxes are one argument. <b>The model is more volatile than the index, by about a fifth, and that is the honest cost of concentration.</b> The question the desk cared about was whether the return justified it. Roughly one and a half times the market's gains, roughly three quarters of its losses, and a Sharpe of <span data-fig="sharpe">1.25</span> against the index's <span data-fig="spy_sharpe">0.64</span> says it did. The return pays for the extra movement rather than merely absorbing it.</p>
   <div class="pull2">Every number on this page is generated from the record itself, not typed from a slide deck. The record includes the trades that lost money.</div>
 </section>
 
@@ -104,16 +104,16 @@
   <p class="prose" style="margin-top:16px">Two measures drive that selection more than raw return. <b>Win rate</b>, because a strategy you cannot stay with is worthless no matter what the curve says, and <b>profit factor</b>, because what actually compounds is the relationship between what the winners make and what the losers cost. A name that returns well but only through two enormous outliers is a name this system does not want.</p>
 
   <div class="big" style="margin-top:26px">
-    <div class="stat"><div class="k">Win rate</div><div class="v">65.2%</div><div class="n">1,334 closed positions since 2008</div></div>
-    <div class="stat"><div class="k">Profit factor</div><div class="v">3.51</div><div class="n">Gross profit against gross loss</div></div>
-    <div class="stat"><div class="k">Average win</div><div class="v">+17.2%</div><div class="n">Average loss &minus;9.0%</div></div>
-    <div class="stat"><div class="k">Median hold</div><div class="v">100 days</div><div class="n">This is not day trading</div></div>
+    <div class="stat"><div class="k">Win rate</div><div class="v" data-fig="win_rate">65.2%</div><div class="n"><span data-fig="closed_positions">1,334</span> closed positions since 2008</div></div>
+    <div class="stat"><div class="k">Profit factor</div><div class="v" data-fig="profit_factor">3.51</div><div class="n">Gross profit against gross loss</div></div>
+    <div class="stat"><div class="k">Average win</div><div class="v" data-fig="avg_win">+17.2%</div><div class="n">Average loss <span data-fig="avg_loss">&minus;9.0%</span></div></div>
+    <div class="stat"><div class="k">Median hold</div><div class="v" data-fig="median_hold">100 days</div><div class="n">This is not day trading</div></div>
   </div>
   <p class="asof">Closed single-name positions in the Model Portfolio record, anchored 2 January 2008, as of the 4 September 2026 close. One position counts once: partial sales taken along the way are aggregated into the position they belong to, not counted as separate trades. Returns are measured against the position's original cost. Based on backtested results.</p>
 
   <p class="prose" style="margin-top:22px">Read the third box before the first. Being right about two thirds of the time is good but not extraordinary. What matters is that <b>the average winner is close to twice the size of the average loser</b>. That asymmetry is the engine, and it is what the exit rule exists to protect: losers are cut while they are still small, winners are left alone to become large.</p>
 
-  <p class="prose" style="margin-top:16px">One note on how these are counted, because it is the easiest place in this industry to flatter yourself. The model sometimes sells part of a position while keeping the rest, and by rule it only ever does that to a winner. <b>Counting each of those partial sales as its own trade would lift the win rate to 75% and it would not mean anything</b>, because you would be counting the same good position several times. So a position counts once here, from entry to final exit, with everything realised along the way folded into it. That is the conservative reading and it is the one we publish.</p>
+  <p class="prose" style="margin-top:16px">One note on how these are counted, because it is the easiest place in this industry to flatter yourself. The model sometimes sells part of a position while keeping the rest, and by rule it only ever does that to a winner. <b>Counting each of those partial sales as its own trade would lift the win rate to <span data-fig="leg_win_rate">75%</span> and it would not mean anything</b>, because you would be counting the same good position several times. So a position counts once here, from entry to final exit, with everything realised along the way folded into it. That is the conservative reading and it is the one we publish.</p>
 </section>
 
 <section class="sec">
@@ -141,25 +141,25 @@
   <table class="yr">
     <thead><tr><th>Year</th><th>Model</th><th>SPY</th><th>Difference</th></tr></thead>
     <tbody>
-      <tr><td>2008</td><td class="neg">&minus;19.25%</td><td class="neg">&minus;36.24%</td><td class="pos">+16.99</td></tr>
-      <tr><td>2009</td><td class="pos">+92.19%</td><td>+26.35%</td><td class="pos">+65.84</td></tr>
-      <tr><td>2010</td><td class="pos">+44.39%</td><td>+15.06%</td><td class="pos">+29.33</td></tr>
-      <tr><td>2011</td><td class="pos">+15.06%</td><td>+1.89%</td><td class="pos">+13.17</td></tr>
-      <tr><td>2012</td><td class="pos">+42.76%</td><td>+15.99%</td><td class="pos">+26.77</td></tr>
-      <tr><td>2013</td><td class="pos">+57.63%</td><td>+32.31%</td><td class="pos">+25.32</td></tr>
-      <tr><td>2014</td><td class="pos">+24.35%</td><td>+13.46%</td><td class="pos">+10.89</td></tr>
-      <tr><td>2015</td><td class="pos">+1.39%</td><td>+1.23%</td><td class="pos">+0.16</td></tr>
-      <tr><td>2016</td><td class="pos">+40.28%</td><td>+12.00%</td><td class="pos">+28.28</td></tr>
-      <tr><td>2017</td><td class="pos">+28.90%</td><td>+21.71%</td><td class="pos">+7.20</td></tr>
-      <tr><td>2018</td><td class="pos">+8.22%</td><td class="neg">&minus;4.57%</td><td class="pos">+12.79</td></tr>
-      <tr><td>2019</td><td class="pos">+42.61%</td><td>+31.22%</td><td class="pos">+11.38</td></tr>
-      <tr><td>2020</td><td class="pos">+28.55%</td><td>+18.33%</td><td class="pos">+10.22</td></tr>
-      <tr><td>2021</td><td class="pos">+64.66%</td><td>+28.73%</td><td class="pos">+35.93</td></tr>
-      <tr><td>2022</td><td class="neg">&minus;8.42%</td><td class="neg">&minus;18.18%</td><td class="pos">+9.76</td></tr>
-      <tr><td>2023</td><td class="pos">+49.65%</td><td>+26.18%</td><td class="pos">+23.47</td></tr>
-      <tr><td>2024</td><td class="pos">+56.92%</td><td>+24.89%</td><td class="pos">+32.03</td></tr>
-      <tr><td>2025</td><td class="pos">+30.19%</td><td>+17.72%</td><td class="pos">+12.47</td></tr>
-      <tr><td>2026</td><td class="pos">+28.30%</td><td>+13.54%</td><td class="pos">+14.76</td></tr>
+      <tr><td>2008</td><td class="neg" data-fig="year.2008.model">&minus;19.25%</td><td class="neg" data-fig="year.2008.spy">&minus;36.24%</td><td class="pos" data-fig="year.2008.diff">+16.99</td></tr>
+      <tr><td>2009</td><td class="pos" data-fig="year.2009.model">+92.19%</td><td data-fig="year.2009.spy">+26.35%</td><td class="pos" data-fig="year.2009.diff">+65.84</td></tr>
+      <tr><td>2010</td><td class="pos" data-fig="year.2010.model">+44.39%</td><td data-fig="year.2010.spy">+15.06%</td><td class="pos" data-fig="year.2010.diff">+29.33</td></tr>
+      <tr><td>2011</td><td class="pos" data-fig="year.2011.model">+15.06%</td><td data-fig="year.2011.spy">+1.89%</td><td class="pos" data-fig="year.2011.diff">+13.17</td></tr>
+      <tr><td>2012</td><td class="pos" data-fig="year.2012.model">+42.76%</td><td data-fig="year.2012.spy">+15.99%</td><td class="pos" data-fig="year.2012.diff">+26.77</td></tr>
+      <tr><td>2013</td><td class="pos" data-fig="year.2013.model">+57.63%</td><td data-fig="year.2013.spy">+32.31%</td><td class="pos" data-fig="year.2013.diff">+25.32</td></tr>
+      <tr><td>2014</td><td class="pos" data-fig="year.2014.model">+24.35%</td><td data-fig="year.2014.spy">+13.46%</td><td class="pos" data-fig="year.2014.diff">+10.89</td></tr>
+      <tr><td>2015</td><td class="pos" data-fig="year.2015.model">+1.39%</td><td data-fig="year.2015.spy">+1.23%</td><td class="pos" data-fig="year.2015.diff">+0.16</td></tr>
+      <tr><td>2016</td><td class="pos" data-fig="year.2016.model">+40.28%</td><td data-fig="year.2016.spy">+12.00%</td><td class="pos" data-fig="year.2016.diff">+28.28</td></tr>
+      <tr><td>2017</td><td class="pos" data-fig="year.2017.model">+28.90%</td><td data-fig="year.2017.spy">+21.71%</td><td class="pos" data-fig="year.2017.diff">+7.20</td></tr>
+      <tr><td>2018</td><td class="pos" data-fig="year.2018.model">+8.22%</td><td class="neg" data-fig="year.2018.spy">&minus;4.57%</td><td class="pos" data-fig="year.2018.diff">+12.79</td></tr>
+      <tr><td>2019</td><td class="pos" data-fig="year.2019.model">+42.61%</td><td data-fig="year.2019.spy">+31.22%</td><td class="pos" data-fig="year.2019.diff">+11.38</td></tr>
+      <tr><td>2020</td><td class="pos" data-fig="year.2020.model">+28.55%</td><td data-fig="year.2020.spy">+18.33%</td><td class="pos" data-fig="year.2020.diff">+10.22</td></tr>
+      <tr><td>2021</td><td class="pos" data-fig="year.2021.model">+64.66%</td><td data-fig="year.2021.spy">+28.73%</td><td class="pos" data-fig="year.2021.diff">+35.93</td></tr>
+      <tr><td>2022</td><td class="neg" data-fig="year.2022.model">&minus;8.42%</td><td class="neg" data-fig="year.2022.spy">&minus;18.18%</td><td class="pos" data-fig="year.2022.diff">+9.76</td></tr>
+      <tr><td>2023</td><td class="pos" data-fig="year.2023.model">+49.65%</td><td data-fig="year.2023.spy">+26.18%</td><td class="pos" data-fig="year.2023.diff">+23.47</td></tr>
+      <tr><td>2024</td><td class="pos" data-fig="year.2024.model">+56.92%</td><td data-fig="year.2024.spy">+24.89%</td><td class="pos" data-fig="year.2024.diff">+32.03</td></tr>
+      <tr><td>2025</td><td class="pos" data-fig="year.2025.model">+30.19%</td><td data-fig="year.2025.spy">+17.72%</td><td class="pos" data-fig="year.2025.diff">+12.47</td></tr>
+      <tr><td>2026</td><td class="pos" data-fig="year.2026.model">+28.30%</td><td data-fig="year.2026.spy">+13.54%</td><td class="pos" data-fig="year.2026.diff">+14.76</td></tr>
     </tbody>
   </table>
   </div>
@@ -199,14 +199,14 @@
 <section class="sec">
   <h2>The question the desk kept asking: what if you buy at the worst possible moment?</h2>
   <p class="h2sub">Rolling three-year and five-year windows, every single starting day.</p>
-  <p class="prose">A single since-inception number tells you almost nothing on its own, because nobody reads a record from its first day. People start paying attention on some ordinary Tuesday, possibly the worst one. So the research desk did not judge this on the headline. It judged it on <b>every three-year and five-year window in the record</b>, one for each trading day, which is 3,942 three-year windows and 3,440 five-year windows.</p>
+  <p class="prose">A single since-inception number tells you almost nothing on its own, because nobody reads a record from its first day. People start paying attention on some ordinary Tuesday, possibly the worst one. So the research desk did not judge this on the headline. It judged it on <b>every three-year and five-year window in the record</b>, one for each trading day, which is <span data-fig="roll3_count">3,945</span> three-year windows and <span data-fig="roll5_count">3,444</span> five-year windows.</p>
   <p class="prose" style="margin-top:16px">That is a deliberately unkind test. It includes the windows that begin the day before a crash, and the ones that begin at a market top. It is also the only test that answers the question a careful reader actually has, which is not "how did it do since 2008" but "how did it do from a bad starting point".</p>
 
   <div class="big" style="margin-top:26px">
-    <div class="stat"><div class="k">Worst 3-year window</div><div class="v">+18.7%</div><div class="n">SPY's worst was &minus;8.3%</div></div>
-    <div class="stat"><div class="k">Worst 5-year window</div><div class="v">+73.5%</div><div class="n">SPY's worst was +12.2%</div></div>
-    <div class="stat"><div class="k">Median 3-year window</div><div class="v">+127%</div><div class="n">SPY median +45.6%</div></div>
-    <div class="stat"><div class="k">Median 5-year window</div><div class="v">+276%</div><div class="n">SPY median +92.1%</div></div>
+    <div class="stat"><div class="k">Worst 3-year window</div><div class="v" data-fig="roll3_model_worst">+18.7%</div><div class="n">SPY's worst was <span data-fig="roll3_spy_worst">&minus;7.4%</span></div></div>
+    <div class="stat"><div class="k">Worst 5-year window</div><div class="v" data-fig="roll5_model_worst">+73.5%</div><div class="n">SPY's worst was <span data-fig="roll5_spy_worst">+12.2%</span></div></div>
+    <div class="stat"><div class="k">Median 3-year window</div><div class="v" data-fig="roll3_model_median">+128%</div><div class="n">SPY median <span data-fig="roll3_spy_median">+45.4%</span></div></div>
+    <div class="stat"><div class="k">Median 5-year window</div><div class="v" data-fig="roll5_model_median">+276%</div><div class="n">SPY median <span data-fig="roll5_spy_median">+92.1%</span></div></div>
   </div>
   <p class="asof">Every rolling window with a complete history in the record, measured daily, anchored 2 January 2008, as of the 4 September 2026 close. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
 

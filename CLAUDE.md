@@ -44,6 +44,8 @@ Each one is a thing that went wrong:
 - CSS braces balance. A stray brace kills every rule after it and the page still renders,
   just wrongly.
 - The file ends with `</html>`.
+- No `data-fig` tag survives into the output. The tags are stripped after assembly; a survivor
+  means the strip regex stopped matching and internal keys were about to be published.
 - `strategy.html` and `subscriptions.html` each carry exactly **12 disclosure clauses**.
   Clauses 3 and 4 are deliberately held out for John to edit; two more are bracketed pending
   counsel. The disclosure text lives once, in `_src/snippets/disclosure.html`, and is
@@ -117,8 +119,24 @@ understates the model because a trim removes profit from a winner before its fin
 model's drawdown was **deeper** than SPY's in three of the five tested declines; the honest story
 is the recovery and the capture ratios, not a claim that it falls less.
 
-Building a check that reads the store and fails when a page figure no longer matches it is
-registered work and is not done. It is the single highest-value thing to add here.
+That check now exists. It lives on SCOUT, not in this repo, because this repo is public:
+
+    ~/Documents/BonsaiKodama/automation/venv/bin/python \
+      ~/Documents/BonsaiKodama/kodama_site_figures.py
+
+It reads the store, truncates it to the as-of date the page states, and compares every tagged
+figure at the precision the page displays. Exit 1 means a figure disagrees. Run it after any
+edit to `strategy.body.html`, and always before a deploy that touches a number.
+
+**Every published figure carries `data-fig="<key>"` in the source.** That is how the checker
+finds a figure without pattern matching over prose, which would be hopeless here: the page holds
+well over a hundred numeric-looking strings and most are SVG coordinates and inline styles.
+`build.py` strips the tags, so they cost the deployed page nothing and no internal key is served.
+
+The checker fails in both directions. A tagged key it cannot compute is a failure, and a figure
+it computes that is no longer tagged is a failure. So deleting or rewording a figure in a copy
+edit does not slip through, and neither does adding an untagged one. If a key appears more than
+once on the page, every instance must agree. Do not answer a failure by removing a tag.
 
 ## COMPLIANCE STATUS OF THESE PAGES
 

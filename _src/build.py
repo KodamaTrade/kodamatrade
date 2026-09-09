@@ -38,6 +38,7 @@ PARAMS = ['20/50', '2/8 SMA', '15% pullback', '60-day lookback', '60 day lookbac
           'MIN_HOLD_BARS', 'LADDER_MIN_UNITS', 'PRUNE_FLOOR', 'MIN_PRUNE_UNITS']
 
 problems = []
+tagged = {}
 
 def check(cond, msg):
     if not cond:
@@ -63,6 +64,15 @@ def build(out, head, body, clauses, no_signal, uri, disclosure):
     bp = os.path.join(SRC, 'sources', body)
     s = open(hp).read() + open(bp).read()
 
+    # Figure tags. Every published number carries data-fig="<key>" in the
+    # sources so the checker on SCOUT can locate it without pattern matching
+    # over prose. They are stripped here, so no internal metric key is ever
+    # served and the tags cost the deployed page nothing. Span carriers wrap
+    # plain text only, which is why unwrapping them is exact. 2026-09-08.
+    s, n_span = re.subn(r'<span data-fig="[A-Za-z0-9_.]+">([^<]*)</span>', r'\1', s)
+    s, n_attr = re.subn(r' data-fig="[A-Za-z0-9_.]+"', '', s)
+    tagged[out] = n_span + n_attr
+
     check(s.count('__LOGO__') == 1,
           '%s: expected exactly one __LOGO__ token, found %d' % (out, s.count('__LOGO__')))
     n_disc = s.count('__DISCLOSURE__')
@@ -79,6 +89,7 @@ def build(out, head, body, clauses, no_signal, uri, disclosure):
         problems.append('%s: no <style> block found' % out)
 
     check(s.rstrip().endswith('</html>'), '%s: does not end with </html>' % out)
+    check('data-fig' not in s, '%s: a figure tag survived stripping' % out)
 
     s = s.replace('__LOGO__', uri).replace('__DISCLOSURE__', disclosure)
     b = body_of(s)
@@ -132,6 +143,7 @@ def main():
         open(path + '.tmp', 'wb').write(data)
         os.replace(path + '.tmp', path)
         print('%-20s %7d bytes  %s' % (out, len(data), hashlib.sha256(data).hexdigest()[:16]))
+    print('figure tags stripped: ' + ', '.join('%s %d' % (k, v) for k, v in tagged.items() if v))
 
 if __name__ == '__main__':
     main()
