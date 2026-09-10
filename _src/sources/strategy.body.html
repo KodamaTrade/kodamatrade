@@ -25,7 +25,7 @@
   <div class="big">
     <div class="stat"><div class="k">Annualised return</div><div class="v" data-fig="cagr">30.96%</div><div class="n">SPY <span data-fig="spy_cagr">11.31%</span> over the same period</div></div>
     <div class="stat"><div class="k">Years beating SPY</div><div class="v" data-fig="years_ahead">19 of 19</div><div class="n"><span data-fig="years_complete">18</span> complete years plus 2026 to date</div></div>
-    <div class="stat"><div class="k">Worst drawdown</div><div class="v" data-fig="max_dd">&minus;40.58%</div><div class="n">2008 to 2009. It happened. It recovered.</div></div>
+    <div class="stat"><div class="k">Worst drawdown</div><div class="v" data-fig="max_dd">&minus;40.58%</div><div class="n">2008 to 2009. SPY <span data-fig="spy_max_dd">&minus;51.87%</span>. It happened. It recovered.</div></div>
     <div class="stat"><div class="k">Sharpe</div><div class="v" data-fig="sharpe">1.25</div><div class="n">Sortino <span data-fig="sortino">1.64</span> &middot; Calmar <span data-fig="calmar">0.76</span></div></div>
   </div>
   <p class="asof">Model Portfolio, whole shares, anchored 2 January 2008 at <span data-fig="anchor_capital">$100,000</span> USD, as of the <span data-fig="asof">4 September 2026</span> close. All figures in US dollars. Based on backtested results. Past performance, whether actual or backtested, does not indicate future results.</p>
@@ -44,15 +44,14 @@
   <p class="prose">A strategy that has only ever run in a rising market has not been tested, it has been lucky. This one has been run through every major decline since the anchor: <b>2008, 2018, 2020, 2022 and 2025</b>. Not as a hypothetical, and not on rules invented afterwards. The same rules, on the same pinned data, through each of them.</p>
   <p class="prose" style="margin-top:16px">It is not a magic trick. In a sharp panic the model can fall as hard as the market or harder, because it holds individual companies rather than five hundred of them. What it does is recover faster and take more of the upside when the recovery comes, and that combination is what compounds. The research desk measured it directly, because a strategy that only looks good on the way up is not a strategy.</p>
 
-  <div class="big" style="margin-top:26px">
+  <div class="big big3" style="margin-top:26px">
     <div class="stat"><div class="k">Upside capture</div><div class="v" data-fig="upside_capture">146%</div><div class="n">Of the market's gain in up months</div></div>
     <div class="stat"><div class="k">Downside capture</div><div class="v" data-fig="downside_capture">74%</div><div class="n">Of the market's loss in down months</div></div>
-    <div class="stat"><div class="k">Sharpe</div><div class="v" data-fig="sharpe">1.25</div><div class="n">SPY <span data-fig="spy_sharpe">0.64</span> over the same period</div></div>
     <div class="stat"><div class="k">Volatility</div><div class="v" data-fig="vol">23.9%</div><div class="n">SPY <span data-fig="spy_vol">19.8%</span>. Higher, and paid for.</div></div>
   </div>
   <p class="asof">Capture ratios computed on <span data-fig="monthly_obs">224</span> monthly observations since January 2008. Volatility and Sharpe annualised from daily returns, risk-free rate zero. As of the 4 September 2026 close. Based on backtested results.</p>
 
-  <p class="prose" style="margin-top:22px">Those four boxes are one argument. <b>The model is more volatile than the index, by about a fifth, and that is the honest cost of concentration.</b> The question the desk cared about was whether the return justified it. Roughly one and a half times the market's gains, roughly three quarters of its losses, and a Sharpe of <span data-fig="sharpe">1.25</span> against the index's <span data-fig="spy_sharpe">0.64</span> says it did. The return pays for the extra movement rather than merely absorbing it.</p>
+  <p class="prose" style="margin-top:22px">Those three boxes are one argument. <b>The model is more volatile than the index, by about a fifth, and that is the honest cost of concentration.</b> The question the desk cared about was whether the return justified it. Roughly one and a half times the market's gains, roughly three quarters of its losses, and a Sharpe of <span data-fig="sharpe">1.25</span> against the index's <span data-fig="spy_sharpe">0.64</span> says it did. The return pays for the extra movement rather than merely absorbing it.</p>
   <div class="pull2">Every number on this page is generated from the record itself, not typed from a slide deck. The record includes the trades that lost money.</div>
 </section>
 
@@ -70,7 +69,7 @@
     <div class="step">
       <div class="num">Step one</div>
       <h3>Nebari</h3>
-      <p>The entry trigger. It looks for a healthy long-term trend that has just given something back, on the theory that the discount is temporary and the trend is not. It fires at the close.</p>
+      <p><b>Roots.</b> In bonsai the nebari is the flare of surface roots at the base of the trunk, the part that shows the tree is anchored well enough to grow. Here it is the entry trigger. It looks for a healthy long-term trend that has just given something back, on the theory that the discount is temporary and the trend is not. It fires at the close.</p>
     </div>
     <div class="step">
       <div class="num">Step two</div>
@@ -85,7 +84,7 @@
     <div class="step">
       <div class="num">Step four</div>
       <h3>Hasami</h3>
-      <p>The exit trigger, and the reason the system exists. It does not negotiate, it does not average down, and it does not wait to get back to even. When it fires, the position is closed.</p>
+      <p><b>Shears.</b> The hasami are the pruning shears, the tool that decides what the tree does not keep. Here it is the exit trigger, and the reason the system exists. It does not negotiate, it does not average down, and it does not wait to get back to even. When it fires, the position is closed.</p>
     </div>
   </div>
   <p class="prose" style="margin-top:24px">Cash never sits idle. Anything not committed to a position is held in the broad market, so the model is always invested in something. That is why it earns during the quiet stretches instead of waiting.</p>
@@ -106,7 +105,7 @@
   <div class="big" style="margin-top:26px">
     <div class="stat"><div class="k">Win rate</div><div class="v" data-fig="win_rate">65.2%</div><div class="n"><span data-fig="closed_positions">1,334</span> closed positions since 2008</div></div>
     <div class="stat"><div class="k">Profit factor</div><div class="v" data-fig="profit_factor">3.51</div><div class="n">Gross profit against gross loss</div></div>
-    <div class="stat"><div class="k">Average win</div><div class="v" data-fig="avg_win">+17.2%</div><div class="n">Average loss <span data-fig="avg_loss">&minus;9.0%</span></div></div>
+    <div class="stat"><div class="k">Average win</div><div class="v" data-fig="avg_win">+17.2%</div><div class="n">Average loss <span data-fig="avg_loss">&minus;9.0%</span> &middot; median win <span data-fig="median_win">+9.3%</span>, median loss <span data-fig="median_loss">&minus;6.7%</span></div></div>
     <div class="stat"><div class="k">Median hold</div><div class="v" data-fig="median_hold">100 days</div><div class="n">This is not day trading</div></div>
   </div>
   <p class="asof">Closed single-name positions in the Model Portfolio record, anchored 2 January 2008, as of the 4 September 2026 close. One position counts once: partial sales taken along the way are aggregated into the position they belong to, not counted as separate trades. Returns are measured against the position's original cost. Based on backtested results.</p>
