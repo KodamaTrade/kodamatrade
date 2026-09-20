@@ -1,0 +1,19 @@
+# Never publish: operational shelf for this apartment. Runbooks, the builder once
+# it is moved out of the published tree, and the blocklist it reads. See _ops/.
+_ops/
+
+# Compiled Python. A .pyc carries the same strings as its source.
+__pycache__/
+*.pyc
+
+.DS_Store
+
+# The builder itself. It lived here, tracked, in a PUBLIC repo from 2026-09-08
+# to 2026-09-20 carrying the publication blocklists. It now lives in _ops/build/.
+# Listed so it cannot come back by an absent-minded `git add`.
+_src/build.py
+
+# The apartment's working rules and the 2026-09-08 handoff. Both were tracked and
+# public, and both described compliance status and internal process in plain
+# English. They are in _ops/ now.
+_src/HANDOFF_*.md
