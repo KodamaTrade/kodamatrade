@@ -16,7 +16,7 @@
   <button class="tbtn" id="bm" aria-pressed="true" onclick="setBilling('m')">Monthly</button>
   <button class="tbtn" id="ba" aria-pressed="false" onclick="setBilling('a')">Annual</button>
 </div>
-<p class="tognote">Checkout opens shortly. All prices are in US dollars. The prices shown are the launch prices.</p>
+<p class="tognote">All prices are in US dollars. The prices shown are the launch prices.</p>
 
 <div class="grid">
 
@@ -50,7 +50,7 @@
     <p class="tdesc">Everything the model does, every trading day. One model, one set of alerts, one published record, the same one you are reading the results of.</p>
     <div class="price"><span class="pnum" data-m="$89" data-a="$74.92">$89</span><span class="pper" data-m="/ month" data-a="/ month, billed annually">/ month</span></div>
     <p class="pnote" data-m="Launch price, subject to change." data-a="$899 a year, price locked for life*">Launch price, subject to change.</p>
-    <button class="cta solid" disabled>Subscribe</button>
+    <a class="cta solid" href="https://buy.stripe.com/4gM6oGgY67Xzcoc6eqgfu00" data-link-m="https://buy.stripe.com/4gM6oGgY67Xzcoc6eqgfu00" data-link-a="https://buy.stripe.com/6oU00i37gelXdsg7iugfu01">Subscribe</a>
     <ul>
       <li><span class="i">&#10003;</span><span>The <b>Kodama Research Desk Daily Newsletter</b>, a market briefing after the close every trading day</span></li>
       <li><span class="i">&#10003;</span><span>A <b>pre-market briefing</b> summary with overnight news</span></li>
@@ -74,7 +74,7 @@
     <p class="tdesc">The same model and the same alerts, plus the first cycle of every newly promoted name, and access to additional models and proprietary quant strategies.</p>
     <div class="price"><span class="pnum" data-m="$129" data-a="$108.25">$129</span><span class="pper" data-m="/ month" data-a="/ month, billed annually">/ month</span></div>
     <p class="pnote" data-m="Launch price, subject to change." data-a="$1,299 a year, price locked for life*">Launch price, subject to change.</p>
-    <button class="cta solid" disabled>Subscribe</button>
+    <a class="cta solid" href="https://buy.stripe.com/aFa3cu9vE2DffAogT4gfu02" data-link-m="https://buy.stripe.com/aFa3cu9vE2DffAogT4gfu02" data-link-a="https://buy.stripe.com/4gMeVcdLU91Dag4cCOgfu03">Subscribe</a>
     <ul>
       <li><span class="i">&#10003;</span><span><b>All Moyogi benefits</b>, including the daily newsletter with trading alerts</span></li>
       <li><span class="i">&#10003;</span><span>Additional <b>mid-day market updates</b>, to stay current on evolving trends</span></li>
@@ -191,6 +191,9 @@ function setBilling(mode){
   document.getElementById('ba').setAttribute('aria-pressed', !m);
   document.querySelectorAll('[data-m]').forEach(function(el){
     el.textContent = m ? el.getAttribute('data-m') : el.getAttribute('data-a');
+  });
+  document.querySelectorAll('[data-link-m]').forEach(function(el){
+    el.setAttribute('href', m ? el.getAttribute('data-link-m') : el.getAttribute('data-link-a'));
   });
 }
 </script>
